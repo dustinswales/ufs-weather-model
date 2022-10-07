@@ -21,12 +21,12 @@ def set_directories(job_obj):
     if job_obj.machine == 'hera':
         workdir = '/scratch1/BMC/gmtb/RT/auto_RT/Pull_Requests'
         blstore = '/scratch1/BMC/gmtb/RT/NCAR'
-        rtbldir = '/scratch1/BMC/gmtb/RT/FV3_RT/'\
+        rtbldir = '/scratch1/BMC/gmtb/RT/stmp4/Dustin.Swales/FV3_RT/'
                  f'REGRESSION_TEST_{job_obj.compiler.upper()}'
     elif job_obj.machine == 'cheyenne':
         workdir = '/glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/auto_RT/Pull_Requests'
         blstore = '/glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR'
-        rtbldir = '/glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/'\
+        rtbldir = '/glade/scratch/dswales/FV3_RT/'\
                  f'REGRESSION_TEST_{job_obj.compiler.upper()}'
     else:
         logger.critical(f'Machine {job_obj.machine} is not supported for this job')

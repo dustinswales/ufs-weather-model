@@ -300,7 +300,7 @@ def setup_env():
         os.environ['ACCNR'] = 'nggps_emc'
     elif bool(re.match(re.compile('Orion-login.+'), hostname)):
         machine = 'orion'
-    elif bool(re.match(re.compile('chadmin.+'), hostname)):
+    elif bool(re.match(re.compile('cheyenne.+'), hostname)):
         machine = 'cheyenne'
         os.environ['ACCNR'] = 'P48503002'
     else:
