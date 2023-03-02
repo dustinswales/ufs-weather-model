@@ -1,36 +1,37 @@
-Thu Feb 23 12:14:22 MST 2023
+Thu Mar  2 11:40:07 MST 2023
 Start Regression test
 
-Compile 001 elapsed time 1434 seconds. -DAPP=S2SWA -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 002 elapsed time 1440 seconds. -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 003 elapsed time 1433 seconds. -DAPP=S2SW -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 004 elapsed time 463 seconds. -DAPP=S2SWA -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
-Compile 005 elapsed time 428 seconds. -DAPP=S2SW -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
-Compile 006 elapsed time 1141 seconds. -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_sfcocn -DCMEPS_AOFLUX=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 007 elapsed time 1127 seconds. -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 008 elapsed time 1006 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km,FV3_WoFS_v0 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 009 elapsed time 1065 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_HRRR_smoke,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 010 elapsed time 972 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_csawmg,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_noahmp -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 011 elapsed time 824 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 012 elapsed time 1431 seconds. -DAPP=ATM -DDEBUG=ON -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 013 elapsed time 262 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 014 elapsed time 850 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -D32BIT=ON -DCCPP_32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 015 elapsed time 845 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -DCCPP_32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 016 elapsed time 266 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -D32BIT=ON -DCCPP_32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 017 elapsed time 271 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -DCCPP_32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 018 elapsed time 1156 seconds. -DAPP=HAFSW -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst,FV3_HAFS_v1_thompson_tedmf_gfdlsf -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 019 elapsed time 1135 seconds. -DAPP=HAFS-ALL -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 020 elapsed time 460 seconds. -DAPP=NG-GODAS -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 021 elapsed time 233 seconds. -DAPP=NG-GODAS -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
-Compile 022 elapsed time 115 seconds. -DAPP=LND -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 023 elapsed time 1002 seconds. -DAPP=ATML -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 024 elapsed time 1003 seconds. -DAPP=ATMW -DCCPP_SUITES=FV3_GFS_v16 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 025 elapsed time 936 seconds. -DAPP=ATMAERO -DCCPP_SUITES=FV3_GFS_v17_p8 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 026 elapsed time 915 seconds. -DAPP=ATMAQ -DCCPP_SUITES=FV3_GFS_v15p2 -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 027 elapsed time 304 seconds. -DAPP=ATMAQ -DCCPP_SUITES=FV3_GFS_v15p2 -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 001 elapsed time 1385 seconds. -DAPP=S2SWA -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 002 elapsed time 1540 seconds. -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 003 elapsed time 1415 seconds. -DAPP=S2SW -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 004 elapsed time 478 seconds. -DAPP=S2SWA -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_cpld_rasmgshocnsstnoahmp_ugwp -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
+Compile 005 elapsed time 414 seconds. -DAPP=S2SW -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
+Compile 006 elapsed time 1093 seconds. -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_sfcocn -DCMEPS_AOFLUX=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 007 elapsed time 1092 seconds. -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 008 elapsed time 1050 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km,FV3_WoFS_v0 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 009 elapsed time 994 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_HRRR_smoke,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 010 elapsed time 942 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_csawmg,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_noahmp -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 011 elapsed time 801 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 012 elapsed time 385 seconds. -DAPP=ATM -DDEBUG=ON -D32BIT=ON -DCCPP_SUITES=FV3_HRRR,FV3_GFS_v16,FV3_GFS_v16_csawmg,FV3_GFS_v16_ras,FV3_GFS_v17_p8,FV3_GFS_v15_thompson_mynn_lam3km,FV3_RAP,FV3_HRRR,FV3_RAP_unified_ugwp,FV3_RAP_cires_ugwp,FV3_RAP_flake,FV3_RAP_noah,FV3_RAP_sfcdiff,FV3_RAP_noah_sfcdiff_cires_ugwp,FV3_RRFS_v1beta -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 013 elapsed time 256 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 014 elapsed time 818 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -D32BIT=ON -DCCPP_32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 015 elapsed time 821 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -DCCPP_32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 016 elapsed time 262 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -D32BIT=ON -DCCPP_32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 017 elapsed time 268 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_HRRR -DCCPP_32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 018 elapsed time 1145 seconds. -DAPP=HAFSW -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst,FV3_HAFS_v1_thompson_tedmf_gfdlsf -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 019 elapsed time 1298 seconds. -DAPP=HAFSW -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v1_thompson_noahmp_nonsst,FV3_HAFS_v1_thompson_noahmp,FV3_HAFS_v1_thompson_nonsst,FV3_HAFS_v1_thompson,FV3_HAFS_v1_gfdlmp_tedmf_nonsst,FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_thompson_tedmf_gfdlsf -D32BIT=ON -DFASTER=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 020 elapsed time 1120 seconds. -DAPP=HAFS-ALL -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 021 elapsed time 458 seconds. -DAPP=NG-GODAS -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 022 elapsed time 225 seconds. -DAPP=NG-GODAS -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
+Compile 023 elapsed time 110 seconds. -DAPP=LND -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 024 elapsed time 960 seconds. -DAPP=ATML -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v15_thompson_mynn_lam3km -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 025 elapsed time 997 seconds. -DAPP=ATMW -DCCPP_SUITES=FV3_GFS_v16 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 026 elapsed time 908 seconds. -DAPP=ATMAERO -DCCPP_SUITES=FV3_GFS_v17_p8 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 027 elapsed time 897 seconds. -DAPP=ATMAQ -DCCPP_SUITES=FV3_GFS_v15p2 -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 028 elapsed time 301 seconds. -DAPP=ATMAQ -DCCPP_SUITES=FV3_GFS_v15p2 -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8_mixedmode
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_p8_mixedmode
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8_mixedmode
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_p8_mixedmode
 Checking test 001 cpld_control_p8_mixedmode results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -95,14 +96,14 @@ Checking test 001 cpld_control_p8_mixedmode results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 322.430875
-0:The maximum resident set size (KB)                   = 2704096
+0:The total amount of wall time                        = 319.640128
+0:The maximum resident set size (KB)                   = 2703936
 
 Test 001 cpld_control_p8_mixedmode PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_gfsv17
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_gfsv17
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_gfsv17
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_gfsv17
 Checking test 002 cpld_control_gfsv17 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -166,14 +167,14 @@ Checking test 002 cpld_control_gfsv17 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 286.359235
-0:The maximum resident set size (KB)                   = 1441452
+0:The total amount of wall time                        = 283.690492
+0:The maximum resident set size (KB)                   = 1441368
 
 Test 002 cpld_control_gfsv17 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_p8
 Checking test 003 cpld_control_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -238,14 +239,14 @@ Checking test 003 cpld_control_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 325.551616
-0:The maximum resident set size (KB)                   = 2720116
+0:The total amount of wall time                        = 321.608763
+0:The maximum resident set size (KB)                   = 2719740
 
 Test 003 cpld_control_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_restart_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_restart_p8
 Checking test 004 cpld_restart_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -298,14 +299,14 @@ Checking test 004 cpld_restart_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 183.739570
-0:The maximum resident set size (KB)                   = 2580852
+0:The total amount of wall time                        = 178.269651
+0:The maximum resident set size (KB)                   = 2581076
 
 Test 004 cpld_restart_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_2threads_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_2threads_p8
 Checking test 005 cpld_2threads_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -358,14 +359,14 @@ Checking test 005 cpld_2threads_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 264.691440
-0:The maximum resident set size (KB)                   = 3178984
+0:The total amount of wall time                        = 259.537611
+0:The maximum resident set size (KB)                   = 3179856
 
 Test 005 cpld_2threads_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_esmfthreads_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_esmfthreads_p8
 Checking test 006 cpld_esmfthreads_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -418,14 +419,14 @@ Checking test 006 cpld_esmfthreads_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 264.061254
-0:The maximum resident set size (KB)                   = 2886648
+0:The total amount of wall time                        = 260.821824
+0:The maximum resident set size (KB)                   = 2886240
 
 Test 006 cpld_esmfthreads_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_decomp_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_decomp_p8
 Checking test 007 cpld_decomp_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -478,14 +479,14 @@ Checking test 007 cpld_decomp_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 324.328688
-0:The maximum resident set size (KB)                   = 2723652
+0:The total amount of wall time                        = 307.222897
+0:The maximum resident set size (KB)                   = 2724072
 
 Test 007 cpld_decomp_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_mpi_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_mpi_p8
 Checking test 008 cpld_mpi_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -538,14 +539,14 @@ Checking test 008 cpld_mpi_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 282.335688
-0:The maximum resident set size (KB)                   = 2684696
+0:The total amount of wall time                        = 280.809056
+0:The maximum resident set size (KB)                   = 2684448
 
 Test 008 cpld_mpi_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_ciceC_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_ciceC_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_ciceC_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_ciceC_p8
 Checking test 009 cpld_control_ciceC_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -610,14 +611,14 @@ Checking test 009 cpld_control_ciceC_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 325.609100
-0:The maximum resident set size (KB)                   = 2720152
+0:The total amount of wall time                        = 310.812312
+0:The maximum resident set size (KB)                   = 2719544
 
 Test 009 cpld_control_ciceC_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_c192_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_c192_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_c192_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_c192_p8
 Checking test 010 cpld_control_c192_p8 results ....
  Comparing sfcf030.tile1.nc .........OK
  Comparing sfcf030.tile2.nc .........OK
@@ -670,14 +671,14 @@ Checking test 010 cpld_control_c192_p8 results ....
  Comparing 20210323.120000.out_grd.ww3 .........OK
  Comparing 20210323.120000.out_pnt.ww3 .........OK
 
-0:The total amount of wall time                        = 860.927190
-0:The maximum resident set size (KB)                   = 3350756
+0:The total amount of wall time                        = 793.226946
+0:The maximum resident set size (KB)                   = 3350420
 
 Test 010 cpld_control_c192_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_c192_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_restart_c192_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_c192_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_restart_c192_p8
 Checking test 011 cpld_restart_c192_p8 results ....
  Comparing sfcf030.tile1.nc .........OK
  Comparing sfcf030.tile2.nc .........OK
@@ -730,14 +731,14 @@ Checking test 011 cpld_restart_c192_p8 results ....
  Comparing 20210323.120000.out_grd.ww3 .........OK
  Comparing 20210323.120000.out_pnt.ww3 .........OK
 
-0:The total amount of wall time                        = 484.535724
-0:The maximum resident set size (KB)                   = 3275244
+0:The total amount of wall time                        = 383.390036
+0:The maximum resident set size (KB)                   = 3276660
 
 Test 011 cpld_restart_c192_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_noaero_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_noaero_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_noaero_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_noaero_p8
 Checking test 012 cpld_control_noaero_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -801,14 +802,14 @@ Checking test 012 cpld_control_noaero_p8 results ....
  Comparing 20210323.060000.out_pnt.ww3 .........OK
  Comparing 20210323.060000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 298.767770
-0:The maximum resident set size (KB)                   = 1440584
+0:The total amount of wall time                        = 285.434402
+0:The maximum resident set size (KB)                   = 1440336
 
 Test 012 cpld_control_noaero_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_c96_noaero_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_nowave_noaero_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_c96_noaero_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_nowave_noaero_p8
 Checking test 013 cpld_control_nowave_noaero_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -870,14 +871,14 @@ Checking test 013 cpld_control_nowave_noaero_p8 results ....
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
 
-0:The total amount of wall time                        = 200.044738
-0:The maximum resident set size (KB)                   = 1456248
+0:The total amount of wall time                        = 192.610180
+0:The maximum resident set size (KB)                   = 1455844
 
 Test 013 cpld_control_nowave_noaero_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_debug_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_debug_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_debug_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_debug_p8
 Checking test 014 cpld_debug_p8 results ....
  Comparing sfcf003.tile1.nc .........OK
  Comparing sfcf003.tile2.nc .........OK
@@ -930,14 +931,14 @@ Checking test 014 cpld_debug_p8 results ....
  Comparing 20210322.090000.out_pnt.ww3 .........OK
  Comparing 20210322.090000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 478.470727
-0:The maximum resident set size (KB)                   = 2791640
+0:The total amount of wall time                        = 472.500369
+0:The maximum resident set size (KB)                   = 2791484
 
 Test 014 cpld_debug_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_debug_noaero_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_debug_noaero_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_debug_noaero_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_debug_noaero_p8
 Checking test 015 cpld_debug_noaero_p8 results ....
  Comparing sfcf003.tile1.nc .........OK
  Comparing sfcf003.tile2.nc .........OK
@@ -989,14 +990,14 @@ Checking test 015 cpld_debug_noaero_p8 results ....
  Comparing 20210322.090000.out_pnt.ww3 .........OK
  Comparing 20210322.090000.out_grd.ww3 .........OK
 
-0:The total amount of wall time                        = 351.689743
-0:The maximum resident set size (KB)                   = 1463824
+0:The total amount of wall time                        = 349.118748
+0:The maximum resident set size (KB)                   = 1463848
 
 Test 015 cpld_debug_noaero_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_noaero_p8_agrid
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_noaero_p8_agrid
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_noaero_p8_agrid
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_noaero_p8_agrid
 Checking test 016 cpld_control_noaero_p8_agrid results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -1058,14 +1059,14 @@ Checking test 016 cpld_control_noaero_p8_agrid results ....
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
 
-0:The total amount of wall time                        = 280.743134
-0:The maximum resident set size (KB)                   = 1459444
+0:The total amount of wall time                        = 266.630926
+0:The maximum resident set size (KB)                   = 1459364
 
 Test 016 cpld_control_noaero_p8_agrid PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_control_c48
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_control_c48
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_control_c48
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_control_c48
 Checking test 017 cpld_control_c48 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -1115,14 +1116,14 @@ Checking test 017 cpld_control_c48 results ....
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
 
-0:The total amount of wall time                        = 610.529787
-0:The maximum resident set size (KB)                   = 2583684
+0:The total amount of wall time                        = 608.710707
+0:The maximum resident set size (KB)                   = 2583592
 
 Test 017 cpld_control_c48 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_warmstart_c48
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_warmstart_c48
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_warmstart_c48
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_warmstart_c48
 Checking test 018 cpld_warmstart_c48 results ....
  Comparing sfcf006.tile1.nc .........OK
  Comparing sfcf006.tile2.nc .........OK
@@ -1172,14 +1173,14 @@ Checking test 018 cpld_warmstart_c48 results ....
  Comparing RESTART/iced.2021-03-23-43200.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-43200.nc .........OK
 
-0:The total amount of wall time                        = 163.738399
-0:The maximum resident set size (KB)                   = 2600160
+0:The total amount of wall time                        = 162.535643
+0:The maximum resident set size (KB)                   = 2600112
 
 Test 018 cpld_warmstart_c48 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/cpld_warmstart_c48
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/cpld_restart_c48
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/cpld_warmstart_c48
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/cpld_restart_c48
 Checking test 019 cpld_restart_c48 results ....
  Comparing sfcf006.tile1.nc .........OK
  Comparing sfcf006.tile2.nc .........OK
@@ -1229,14 +1230,14 @@ Checking test 019 cpld_restart_c48 results ....
  Comparing RESTART/iced.2021-03-23-43200.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-43200.nc .........OK
 
-0:The total amount of wall time                        = 86.518495
-0:The maximum resident set size (KB)                   = 2017324
+0:The total amount of wall time                        = 85.315801
+0:The maximum resident set size (KB)                   = 2017128
 
 Test 019 cpld_restart_c48 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_CubedSphereGrid
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_CubedSphereGrid
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_CubedSphereGrid
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_CubedSphereGrid
 Checking test 020 control_CubedSphereGrid results ....
  Comparing sfcf000.tile1.nc .........OK
  Comparing sfcf000.tile2.nc .........OK
@@ -1263,28 +1264,28 @@ Checking test 020 control_CubedSphereGrid results ....
  Comparing atmf024.tile5.nc .........OK
  Comparing atmf024.tile6.nc .........OK
 
-0:The total amount of wall time                        = 143.150738
-0:The maximum resident set size (KB)                   = 456412
+0:The total amount of wall time                        = 141.429304
+0:The maximum resident set size (KB)                   = 456384
 
 Test 020 control_CubedSphereGrid PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_CubedSphereGrid_parallel
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_CubedSphereGrid_parallel
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_CubedSphereGrid_parallel
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_CubedSphereGrid_parallel
 Checking test 021 control_CubedSphereGrid_parallel results ....
  Comparing sfcf000.nc ............ALT CHECK......OK
  Comparing sfcf024.nc ............ALT CHECK......OK
  Comparing atmf000.nc ............ALT CHECK......OK
- Comparing atmf024.nc .........OK
+ Comparing atmf024.nc ............ALT CHECK......OK
 
-0:The total amount of wall time                        = 143.005785
-0:The maximum resident set size (KB)                   = 456440
+0:The total amount of wall time                        = 139.744854
+0:The maximum resident set size (KB)                   = 456276
 
 Test 021 control_CubedSphereGrid_parallel PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_latlon
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_latlon
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_latlon
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_latlon
 Checking test 022 control_latlon results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1295,14 +1296,14 @@ Checking test 022 control_latlon results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 145.528170
-0:The maximum resident set size (KB)                   = 456500
+0:The total amount of wall time                        = 146.651285
+0:The maximum resident set size (KB)                   = 456616
 
 Test 022 control_latlon PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_wrtGauss_netcdf_parallel
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_wrtGauss_netcdf_parallel
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_wrtGauss_netcdf_parallel
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_wrtGauss_netcdf_parallel
 Checking test 023 control_wrtGauss_netcdf_parallel results ....
  Comparing sfcf000.nc ............ALT CHECK......OK
  Comparing sfcf024.nc .........OK
@@ -1313,14 +1314,14 @@ Checking test 023 control_wrtGauss_netcdf_parallel results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 149.289472
-0:The maximum resident set size (KB)                   = 456448
+0:The total amount of wall time                        = 149.124241
+0:The maximum resident set size (KB)                   = 456440
 
 Test 023 control_wrtGauss_netcdf_parallel PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_c48
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_c48
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_c48
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_c48
 Checking test 024 control_c48 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1359,14 +1360,14 @@ Checking test 024 control_c48 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 445.207759
-0:The maximum resident set size (KB)                   = 629016
+0:The total amount of wall time                        = 445.136346
+0:The maximum resident set size (KB)                   = 628360
 
 Test 024 control_c48 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_c192
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_c192
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_c192
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_c192
 Checking test 025 control_c192 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1377,14 +1378,14 @@ Checking test 025 control_c192 results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 593.771289
-0:The maximum resident set size (KB)                   = 560272
+0:The total amount of wall time                        = 594.370382
+0:The maximum resident set size (KB)                   = 560352
 
 Test 025 control_c192 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_c384gdas
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_c384gdas
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_c384gdas
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_c384gdas
 Checking test 026 control_c384gdas results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf006.nc .........OK
@@ -1427,14 +1428,14 @@ Checking test 026 control_c384gdas results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 528.515757
-0:The maximum resident set size (KB)                   = 993228
+0:The total amount of wall time                        = 522.368598
+0:The maximum resident set size (KB)                   = 993524
 
 Test 026 control_c384gdas PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_stochy
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_stochy
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_stochy
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_stochy
 Checking test 027 control_stochy results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1445,28 +1446,28 @@ Checking test 027 control_stochy results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-0:The total amount of wall time                        = 98.450076
-0:The maximum resident set size (KB)                   = 458388
+0:The total amount of wall time                        = 98.084476
+0:The maximum resident set size (KB)                   = 458280
 
 Test 027 control_stochy PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_stochy
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_stochy_restart
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_stochy
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_stochy_restart
 Checking test 028 control_stochy_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-0:The total amount of wall time                        = 51.842097
-0:The maximum resident set size (KB)                   = 225948
+0:The total amount of wall time                        = 51.883753
+0:The maximum resident set size (KB)                   = 225816
 
 Test 028 control_stochy_restart PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_lndp
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_lndp
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_lndp
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_lndp
 Checking test 029 control_lndp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1477,14 +1478,14 @@ Checking test 029 control_lndp results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-0:The total amount of wall time                        = 92.321047
-0:The maximum resident set size (KB)                   = 460576
+0:The total amount of wall time                        = 89.939377
+0:The maximum resident set size (KB)                   = 460548
 
 Test 029 control_lndp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_iovr4
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_iovr4
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_iovr4
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_iovr4
 Checking test 030 control_iovr4 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1499,14 +1500,14 @@ Checking test 030 control_iovr4 results ....
  Comparing GFSPRS.GrbF21 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 149.455656
-0:The maximum resident set size (KB)                   = 456436
+0:The total amount of wall time                        = 149.453511
+0:The maximum resident set size (KB)                   = 456392
 
 Test 030 control_iovr4 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_iovr5
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_iovr5
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_iovr5
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_iovr5
 Checking test 031 control_iovr5 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1521,14 +1522,14 @@ Checking test 031 control_iovr5 results ....
  Comparing GFSPRS.GrbF21 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 147.810790
-0:The maximum resident set size (KB)                   = 456528
+0:The total amount of wall time                        = 147.599773
+0:The maximum resident set size (KB)                   = 456404
 
 Test 031 control_iovr5 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_p8
 Checking test 032 control_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1575,14 +1576,14 @@ Checking test 032 control_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 180.530059
-0:The maximum resident set size (KB)                   = 1426396
+0:The total amount of wall time                        = 181.265587
+0:The maximum resident set size (KB)                   = 1426348
 
 Test 032 control_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8_lndp
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_p8_lndp
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8_lndp
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_p8_lndp
 Checking test 033 control_p8_lndp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1601,14 +1602,14 @@ Checking test 033 control_p8_lndp results ....
  Comparing GFSPRS.GrbF24 .........OK
  Comparing GFSPRS.GrbF48 .........OK
 
-0:The total amount of wall time                        = 342.001979
-0:The maximum resident set size (KB)                   = 1426656
+0:The total amount of wall time                        = 327.258067
+0:The maximum resident set size (KB)                   = 1426612
 
 Test 033 control_p8_lndp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_restart_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_restart_p8
 Checking test 034 control_restart_p8 results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
@@ -1647,14 +1648,14 @@ Checking test 034 control_restart_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 95.479560
-0:The maximum resident set size (KB)                   = 583348
+0:The total amount of wall time                        = 95.429217
+0:The maximum resident set size (KB)                   = 583128
 
 Test 034 control_restart_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_decomp_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_decomp_p8
 Checking test 035 control_decomp_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1697,14 +1698,14 @@ Checking test 035 control_decomp_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 187.306883
-0:The maximum resident set size (KB)                   = 1420368
+0:The total amount of wall time                        = 187.005112
+0:The maximum resident set size (KB)                   = 1420296
 
 Test 035 control_decomp_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_2threads_p8
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_2threads_p8
 Checking test 036 control_2threads_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1747,14 +1748,14 @@ Checking test 036 control_2threads_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 178.005295
-0:The maximum resident set size (KB)                   = 1509680
+0:The total amount of wall time                        = 175.767267
+0:The maximum resident set size (KB)                   = 1508208
 
 Test 036 control_2threads_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8_rrtmgp
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_p8_rrtmgp
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8_rrtmgp
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_p8_rrtmgp
 Checking test 037 control_p8_rrtmgp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1801,14 +1802,14 @@ Checking test 037 control_p8_rrtmgp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 249.555279
-0:The maximum resident set size (KB)                   = 1542172
+0:The total amount of wall time                        = 253.650967
+0:The maximum resident set size (KB)                   = 1483732
 
 Test 037 control_p8_rrtmgp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/merra2_thompson
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/merra2_thompson
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/merra2_thompson
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/merra2_thompson
 Checking test 038 merra2_thompson results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1855,14 +1856,14 @@ Checking test 038 merra2_thompson results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 205.282909
-0:The maximum resident set size (KB)                   = 1433072
+0:The total amount of wall time                        = 207.251776
+0:The maximum resident set size (KB)                   = 1432920
 
 Test 038 merra2_thompson PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_control
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_control
 Checking test 039 regional_control results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1873,28 +1874,28 @@ Checking test 039 regional_control results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 342.457263
-0:The maximum resident set size (KB)                   = 608172
+0:The total amount of wall time                        = 342.946381
+0:The maximum resident set size (KB)                   = 608100
 
 Test 039 regional_control PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_restart
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_restart
 Checking test 040 regional_restart results ....
  Comparing dynf006.nc .........OK
  Comparing phyf006.nc .........OK
  Comparing PRSLEV.GrbF06 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 175.315571
-0:The maximum resident set size (KB)                   = 594532
+0:The total amount of wall time                        = 172.755624
+0:The maximum resident set size (KB)                   = 594580
 
 Test 040 regional_restart PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_decomp
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_decomp
 Checking test 041 regional_decomp results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1905,14 +1906,14 @@ Checking test 041 regional_decomp results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 368.575573
-0:The maximum resident set size (KB)                   = 598428
+0:The total amount of wall time                        = 360.131459
+0:The maximum resident set size (KB)                   = 598232
 
 Test 041 regional_decomp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_2threads
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_2threads
 Checking test 042 regional_2threads results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1923,14 +1924,14 @@ Checking test 042 regional_2threads results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 215.607937
-0:The maximum resident set size (KB)                   = 606308
+0:The total amount of wall time                        = 212.594025
+0:The maximum resident set size (KB)                   = 606264
 
 Test 042 regional_2threads PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_noquilt
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_noquilt
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_noquilt
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_noquilt
 Checking test 043 regional_noquilt results ....
  Comparing atmos_4xdaily.nc .........OK
  Comparing fv3_history2d.nc .........OK
@@ -1938,28 +1939,28 @@ Checking test 043 regional_noquilt results ....
  Comparing RESTART/fv_core.res.tile1_new.nc .........OK
  Comparing RESTART/fv_tracer.res.tile1_new.nc .........OK
 
-0:The total amount of wall time                        = 370.641534
-0:The maximum resident set size (KB)                   = 601204
+0:The total amount of wall time                        = 367.316862
+0:The maximum resident set size (KB)                   = 601120
 
 Test 043 regional_noquilt PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_netcdf_parallel
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_netcdf_parallel
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_netcdf_parallel
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_netcdf_parallel
 Checking test 044 regional_netcdf_parallel results ....
- Comparing dynf000.nc .........OK
+ Comparing dynf000.nc ............ALT CHECK......OK
  Comparing dynf006.nc ............ALT CHECK......OK
- Comparing phyf000.nc .........OK
+ Comparing phyf000.nc ............ALT CHECK......OK
  Comparing phyf006.nc ............ALT CHECK......OK
 
-0:The total amount of wall time                        = 347.281303
-0:The maximum resident set size (KB)                   = 593604
+0:The total amount of wall time                        = 337.978463
+0:The maximum resident set size (KB)                   = 593524
 
 Test 044 regional_netcdf_parallel PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_2dwrtdecomp
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_2dwrtdecomp
 Checking test 045 regional_2dwrtdecomp results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1970,14 +1971,14 @@ Checking test 045 regional_2dwrtdecomp results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 343.933464
-0:The maximum resident set size (KB)                   = 608256
+0:The total amount of wall time                        = 341.695068
+0:The maximum resident set size (KB)                   = 608128
 
 Test 045 regional_2dwrtdecomp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/fv3_regional_wofs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_wofs
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/fv3_regional_wofs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_wofs
 Checking test 046 regional_wofs results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1988,14 +1989,14 @@ Checking test 046 regional_wofs results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-0:The total amount of wall time                        = 423.684863
-0:The maximum resident set size (KB)                   = 273720
+0:The total amount of wall time                        = 416.023937
+0:The maximum resident set size (KB)                   = 273744
 
 Test 046 regional_wofs PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control
 Checking test 047 rap_control results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -2042,69 +2043,15 @@ Checking test 047 rap_control results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 479.897812
-0:The maximum resident set size (KB)                   = 829896
+0:The total amount of wall time                        = 478.281091
+0:The maximum resident set size (KB)                   = 829948
 
 Test 047 rap_control PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_rrtmgp
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_rrtmgp
-Checking test 048 rap_rrtmgp results ....
- Comparing sfcf000.nc .........OK
- Comparing sfcf009.nc .........OK
- Comparing sfcf012.nc .........OK
- Comparing atmf000.nc .........OK
- Comparing atmf009.nc .........OK
- Comparing atmf012.nc .........OK
- Comparing GFSFLX.GrbF00 .........OK
- Comparing GFSFLX.GrbF09 .........OK
- Comparing GFSFLX.GrbF12 .........OK
- Comparing GFSPRS.GrbF00 .........OK
- Comparing GFSPRS.GrbF09 .........OK
- Comparing GFSPRS.GrbF12 .........OK
- Comparing RESTART/coupler.res .........OK
- Comparing RESTART/fv_core.res.nc .........OK
- Comparing RESTART/fv_core.res.tile1.nc .........OK
- Comparing RESTART/fv_core.res.tile2.nc .........OK
- Comparing RESTART/fv_core.res.tile3.nc .........OK
- Comparing RESTART/fv_core.res.tile4.nc .........OK
- Comparing RESTART/fv_core.res.tile5.nc .........OK
- Comparing RESTART/fv_core.res.tile6.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile1.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile2.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile3.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile4.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile5.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile6.nc .........OK
- Comparing RESTART/fv_tracer.res.tile1.nc .........OK
- Comparing RESTART/fv_tracer.res.tile2.nc .........OK
- Comparing RESTART/fv_tracer.res.tile3.nc .........OK
- Comparing RESTART/fv_tracer.res.tile4.nc .........OK
- Comparing RESTART/fv_tracer.res.tile5.nc .........OK
- Comparing RESTART/fv_tracer.res.tile6.nc .........OK
- Comparing RESTART/phy_data.tile1.nc .........OK
- Comparing RESTART/phy_data.tile2.nc .........OK
- Comparing RESTART/phy_data.tile3.nc .........OK
- Comparing RESTART/phy_data.tile4.nc .........OK
- Comparing RESTART/phy_data.tile5.nc .........OK
- Comparing RESTART/phy_data.tile6.nc .........OK
- Comparing RESTART/sfc_data.tile1.nc .........OK
- Comparing RESTART/sfc_data.tile2.nc .........OK
- Comparing RESTART/sfc_data.tile3.nc .........OK
- Comparing RESTART/sfc_data.tile4.nc .........OK
- Comparing RESTART/sfc_data.tile5.nc .........OK
- Comparing RESTART/sfc_data.tile6.nc .........OK
-
-0:The total amount of wall time                        = 541.826511
-0:The maximum resident set size (KB)                   = 953728
-
-Test 048 rap_rrtmgp PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_spp_sppt_shum_skeb
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_spp_sppt_shum_skeb
-Checking test 049 regional_spp_sppt_shum_skeb results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_spp_sppt_shum_skeb
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_spp_sppt_shum_skeb
+Checking test 048 regional_spp_sppt_shum_skeb results ....
  Comparing dynf000.nc .........OK
  Comparing dynf001.nc .........OK
  Comparing phyf000.nc .........OK
@@ -2114,15 +2061,15 @@ Checking test 049 regional_spp_sppt_shum_skeb results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF01 .........OK
 
-0:The total amount of wall time                        = 327.079016
-0:The maximum resident set size (KB)                   = 952268
+0:The total amount of wall time                        = 325.454323
+0:The maximum resident set size (KB)                   = 952160
 
-Test 049 regional_spp_sppt_shum_skeb PASS
+Test 048 regional_spp_sppt_shum_skeb PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_decomp
-Checking test 050 rap_decomp results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_decomp
+Checking test 049 rap_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -2168,15 +2115,15 @@ Checking test 050 rap_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 502.416646
-0:The maximum resident set size (KB)                   = 826072
+0:The total amount of wall time                        = 500.984286
+0:The maximum resident set size (KB)                   = 825908
 
-Test 050 rap_decomp PASS
+Test 049 rap_decomp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_2threads
-Checking test 051 rap_2threads results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_2threads
+Checking test 050 rap_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -2222,15 +2169,15 @@ Checking test 051 rap_2threads results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 467.046765
-0:The maximum resident set size (KB)                   = 897800
+0:The total amount of wall time                        = 464.605203
+0:The maximum resident set size (KB)                   = 896076
 
-Test 051 rap_2threads PASS
+Test 050 rap_2threads PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_restart
-Checking test 052 rap_restart results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_restart
+Checking test 051 rap_restart results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
  Comparing GFSFLX.GrbF24 .........OK
@@ -2268,15 +2215,15 @@ Checking test 052 rap_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 241.204788
-0:The maximum resident set size (KB)                   = 573548
+0:The total amount of wall time                        = 241.789981
+0:The maximum resident set size (KB)                   = 573524
 
-Test 052 rap_restart PASS
+Test 051 rap_restart PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_sfcdiff
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_sfcdiff
-Checking test 053 rap_sfcdiff results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_sfcdiff
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_sfcdiff
+Checking test 052 rap_sfcdiff results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2322,15 +2269,15 @@ Checking test 053 rap_sfcdiff results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 472.523006
-0:The maximum resident set size (KB)                   = 826616
+0:The total amount of wall time                        = 470.073294
+0:The maximum resident set size (KB)                   = 826464
 
-Test 053 rap_sfcdiff PASS
+Test 052 rap_sfcdiff PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_sfcdiff
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_sfcdiff_decomp
-Checking test 054 rap_sfcdiff_decomp results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_sfcdiff
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_sfcdiff_decomp
+Checking test 053 rap_sfcdiff_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2376,15 +2323,15 @@ Checking test 054 rap_sfcdiff_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 499.842790
-0:The maximum resident set size (KB)                   = 825984
+0:The total amount of wall time                        = 498.171748
+0:The maximum resident set size (KB)                   = 825832
 
-Test 054 rap_sfcdiff_decomp PASS
+Test 053 rap_sfcdiff_decomp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_sfcdiff
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_sfcdiff_restart
-Checking test 055 rap_sfcdiff_restart results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_sfcdiff
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_sfcdiff_restart
+Checking test 054 rap_sfcdiff_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -2422,15 +2369,15 @@ Checking test 055 rap_sfcdiff_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 354.007763
-0:The maximum resident set size (KB)                   = 572916
+0:The total amount of wall time                        = 354.644450
+0:The maximum resident set size (KB)                   = 572800
 
-Test 055 rap_sfcdiff_restart PASS
+Test 054 rap_sfcdiff_restart PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control
-Checking test 056 hrrr_control results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control
+Checking test 055 hrrr_control results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2476,15 +2423,15 @@ Checking test 056 hrrr_control results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 452.613827
-0:The maximum resident set size (KB)                   = 824832
+0:The total amount of wall time                        = 453.557057
+0:The maximum resident set size (KB)                   = 824872
 
-Test 056 hrrr_control PASS
+Test 055 hrrr_control PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_decomp
-Checking test 057 hrrr_control_decomp results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_decomp
+Checking test 056 hrrr_control_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2530,15 +2477,15 @@ Checking test 057 hrrr_control_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 475.415626
-0:The maximum resident set size (KB)                   = 823924
+0:The total amount of wall time                        = 474.403823
+0:The maximum resident set size (KB)                   = 823748
 
-Test 057 hrrr_control_decomp PASS
+Test 056 hrrr_control_decomp PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_2threads
-Checking test 058 hrrr_control_2threads results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_2threads
+Checking test 057 hrrr_control_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2584,15 +2531,15 @@ Checking test 058 hrrr_control_2threads results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 438.584550
-0:The maximum resident set size (KB)                   = 891108
+0:The total amount of wall time                        = 435.218515
+0:The maximum resident set size (KB)                   = 891068
 
-Test 058 hrrr_control_2threads PASS
+Test 057 hrrr_control_2threads PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_restart
-Checking test 059 hrrr_control_restart results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_restart
+Checking test 058 hrrr_control_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -2630,15 +2577,15 @@ Checking test 059 hrrr_control_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 342.454005
-0:The maximum resident set size (KB)                   = 568736
+0:The total amount of wall time                        = 341.098498
+0:The maximum resident set size (KB)                   = 568632
 
-Test 059 hrrr_control_restart PASS
+Test 058 hrrr_control_restart PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_v1beta
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_v1beta
-Checking test 060 rrfs_v1beta results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_v1beta
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_v1beta
+Checking test 059 rrfs_v1beta results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2684,15 +2631,15 @@ Checking test 060 rrfs_v1beta results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 467.960947
-0:The maximum resident set size (KB)                   = 823200
+0:The total amount of wall time                        = 465.346976
+0:The maximum resident set size (KB)                   = 823116
 
-Test 060 rrfs_v1beta PASS
+Test 059 rrfs_v1beta PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_v1nssl
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_v1nssl
-Checking test 061 rrfs_v1nssl results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_v1nssl
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_v1nssl
+Checking test 060 rrfs_v1nssl results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2706,15 +2653,15 @@ Checking test 061 rrfs_v1nssl results ....
  Comparing GFSPRS.GrbF09 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-0:The total amount of wall time                        = 571.598073
-0:The maximum resident set size (KB)                   = 511300
+0:The total amount of wall time                        = 574.833076
+0:The maximum resident set size (KB)                   = 511408
 
-Test 061 rrfs_v1nssl PASS
+Test 060 rrfs_v1nssl PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_v1nssl_nohailnoccn
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_v1nssl_nohailnoccn
-Checking test 062 rrfs_v1nssl_nohailnoccn results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_v1nssl_nohailnoccn
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_v1nssl_nohailnoccn
+Checking test 061 rrfs_v1nssl_nohailnoccn results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2728,15 +2675,15 @@ Checking test 062 rrfs_v1nssl_nohailnoccn results ....
  Comparing GFSPRS.GrbF09 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-0:The total amount of wall time                        = 557.693775
-0:The maximum resident set size (KB)                   = 506564
+0:The total amount of wall time                        = 556.929854
+0:The maximum resident set size (KB)                   = 506476
 
-Test 062 rrfs_v1nssl_nohailnoccn PASS
+Test 061 rrfs_v1nssl_nohailnoccn PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_hrrr_warm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_hrrr_warm
-Checking test 063 rrfs_conus13km_hrrr_warm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_hrrr_warm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_hrrr_warm
+Checking test 062 rrfs_conus13km_hrrr_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2744,15 +2691,15 @@ Checking test 063 rrfs_conus13km_hrrr_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-0:The total amount of wall time                        = 130.328585
-0:The maximum resident set size (KB)                   = 641264
+0:The total amount of wall time                        = 130.591075
+0:The maximum resident set size (KB)                   = 640788
 
-Test 063 rrfs_conus13km_hrrr_warm PASS
+Test 062 rrfs_conus13km_hrrr_warm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_smoke_conus13km_hrrr_warm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_smoke_conus13km_hrrr_warm
-Checking test 064 rrfs_smoke_conus13km_hrrr_warm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_smoke_conus13km_hrrr_warm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_smoke_conus13km_hrrr_warm
+Checking test 063 rrfs_smoke_conus13km_hrrr_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2760,15 +2707,15 @@ Checking test 064 rrfs_smoke_conus13km_hrrr_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-0:The total amount of wall time                        = 145.683364
-0:The maximum resident set size (KB)                   = 656432
+0:The total amount of wall time                        = 144.433538
+0:The maximum resident set size (KB)                   = 656428
 
-Test 064 rrfs_smoke_conus13km_hrrr_warm PASS
+Test 063 rrfs_smoke_conus13km_hrrr_warm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_radar_tten_warm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_radar_tten_warm
-Checking test 065 rrfs_conus13km_radar_tten_warm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_radar_tten_warm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_radar_tten_warm
+Checking test 064 rrfs_conus13km_radar_tten_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2776,15 +2723,15 @@ Checking test 065 rrfs_conus13km_radar_tten_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-0:The total amount of wall time                        = 129.258146
-0:The maximum resident set size (KB)                   = 644192
+0:The total amount of wall time                        = 128.714731
+0:The maximum resident set size (KB)                   = 643892
 
-Test 065 rrfs_conus13km_radar_tten_warm PASS
+Test 064 rrfs_conus13km_radar_tten_warm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_hrrr_warm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_hrrr_warm_2threads
-Checking test 066 rrfs_conus13km_hrrr_warm_2threads results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_hrrr_warm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_hrrr_warm_2threads
+Checking test 065 rrfs_conus13km_hrrr_warm_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2792,15 +2739,15 @@ Checking test 066 rrfs_conus13km_hrrr_warm_2threads results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-0:The total amount of wall time                        = 82.114090
-0:The maximum resident set size (KB)                   = 659984
+0:The total amount of wall time                        = 82.150401
+0:The maximum resident set size (KB)                   = 659180
 
-Test 066 rrfs_conus13km_hrrr_warm_2threads PASS
+Test 065 rrfs_conus13km_hrrr_warm_2threads PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_radar_tten_warm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_radar_tten_warm_2threads
-Checking test 067 rrfs_conus13km_radar_tten_warm_2threads results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_radar_tten_warm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_radar_tten_warm_2threads
+Checking test 066 rrfs_conus13km_radar_tten_warm_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2808,15 +2755,15 @@ Checking test 067 rrfs_conus13km_radar_tten_warm_2threads results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-0:The total amount of wall time                        = 82.040240
-0:The maximum resident set size (KB)                   = 662240
+0:The total amount of wall time                        = 81.953661
+0:The maximum resident set size (KB)                   = 661728
 
-Test 067 rrfs_conus13km_radar_tten_warm_2threads PASS
+Test 066 rrfs_conus13km_radar_tten_warm_2threads PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_csawmg
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_csawmg
-Checking test 068 control_csawmg results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_csawmg
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_csawmg
+Checking test 067 control_csawmg results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2826,15 +2773,15 @@ Checking test 068 control_csawmg results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 399.763410
-0:The maximum resident set size (KB)                   = 532596
+0:The total amount of wall time                        = 395.997420
+0:The maximum resident set size (KB)                   = 532532
 
-Test 068 control_csawmg PASS
+Test 067 control_csawmg PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_csawmgt
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_csawmgt
-Checking test 069 control_csawmgt results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_csawmgt
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_csawmgt
+Checking test 068 control_csawmgt results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2844,15 +2791,15 @@ Checking test 069 control_csawmgt results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 395.451733
-0:The maximum resident set size (KB)                   = 531724
+0:The total amount of wall time                        = 393.259431
+0:The maximum resident set size (KB)                   = 531728
 
-Test 069 control_csawmgt PASS
+Test 068 control_csawmgt PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_ras
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_ras
-Checking test 070 control_ras results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_ras
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_ras
+Checking test 069 control_ras results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2862,55 +2809,55 @@ Checking test 070 control_ras results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-0:The total amount of wall time                        = 204.202899
-0:The maximum resident set size (KB)                   = 490812
+0:The total amount of wall time                        = 204.091508
+0:The maximum resident set size (KB)                   = 492464
 
-Test 070 control_ras PASS
+Test 069 control_ras PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_wam
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_wam
-Checking test 071 control_wam results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_wam
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_wam
+Checking test 070 control_wam results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
 
-0:The total amount of wall time                        = 129.925313
-0:The maximum resident set size (KB)                   = 207968
+0:The total amount of wall time                        = 129.206983
+0:The maximum resident set size (KB)                   = 207876
 
-Test 071 control_wam PASS
+Test 070 control_wam PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_hrrr_warm_debugs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_hrrr_warm_debug
-Checking test 072 rrfs_conus13km_hrrr_warm_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_hrrr_warm_debugs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_hrrr_warm_debug
+Checking test 071 rrfs_conus13km_hrrr_warm_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 763.993792
-0:The maximum resident set size (KB)                   = 670444
+0:The total amount of wall time                        = 762.437965
+0:The maximum resident set size (KB)                   = 670304
 
-Test 072 rrfs_conus13km_hrrr_warm_debug PASS
+Test 071 rrfs_conus13km_hrrr_warm_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_conus13km_radar_tten_warm_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_conus13km_radar_tten_warm_debug
-Checking test 073 rrfs_conus13km_radar_tten_warm_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_conus13km_radar_tten_warm_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_conus13km_radar_tten_warm_debug
+Checking test 072 rrfs_conus13km_radar_tten_warm_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 763.123224
-0:The maximum resident set size (KB)                   = 674044
+0:The total amount of wall time                        = 760.802771
+0:The maximum resident set size (KB)                   = 673552
 
-Test 073 rrfs_conus13km_radar_tten_warm_debug PASS
+Test 072 rrfs_conus13km_radar_tten_warm_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_CubedSphereGrid_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_CubedSphereGrid_debug
-Checking test 074 control_CubedSphereGrid_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_CubedSphereGrid_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_CubedSphereGrid_debug
+Checking test 073 control_CubedSphereGrid_debug results ....
  Comparing sfcf000.tile1.nc .........OK
  Comparing sfcf000.tile2.nc .........OK
  Comparing sfcf000.tile3.nc .........OK
@@ -2936,349 +2883,335 @@ Checking test 074 control_CubedSphereGrid_debug results ....
  Comparing atmf001.tile5.nc .........OK
  Comparing atmf001.tile6.nc .........OK
 
-0:The total amount of wall time                        = 175.476681
-0:The maximum resident set size (KB)                   = 626268
+0:The total amount of wall time                        = 173.974307
+0:The maximum resident set size (KB)                   = 624848
 
-Test 074 control_CubedSphereGrid_debug PASS
+Test 073 control_CubedSphereGrid_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_wrtGauss_netcdf_parallel_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_wrtGauss_netcdf_parallel_debug
-Checking test 075 control_wrtGauss_netcdf_parallel_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_wrtGauss_netcdf_parallel_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_wrtGauss_netcdf_parallel_debug
+Checking test 074 control_wrtGauss_netcdf_parallel_debug results ....
  Comparing sfcf000.nc .........OK
- Comparing sfcf001.nc .........OK
+ Comparing sfcf001.nc ............ALT CHECK......OK
  Comparing atmf000.nc ............ALT CHECK......OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 164.334640
-0:The maximum resident set size (KB)                   = 626248
+0:The total amount of wall time                        = 162.386289
+0:The maximum resident set size (KB)                   = 624896
 
-Test 075 control_wrtGauss_netcdf_parallel_debug PASS
+Test 074 control_wrtGauss_netcdf_parallel_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_stochy_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_stochy_debug
-Checking test 076 control_stochy_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_stochy_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_stochy_debug
+Checking test 075 control_stochy_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 184.142956
-0:The maximum resident set size (KB)                   = 629760
+0:The total amount of wall time                        = 181.676243
+0:The maximum resident set size (KB)                   = 628428
 
-Test 076 control_stochy_debug PASS
+Test 075 control_stochy_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_lndp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_lndp_debug
-Checking test 077 control_lndp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_lndp_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_lndp_debug
+Checking test 076 control_lndp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 166.117049
-0:The maximum resident set size (KB)                   = 630236
+0:The total amount of wall time                        = 164.355896
+0:The maximum resident set size (KB)                   = 628832
 
-Test 077 control_lndp_debug PASS
+Test 076 control_lndp_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_csawmg_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_csawmg_debug
-Checking test 078 control_csawmg_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_csawmg_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_csawmg_debug
+Checking test 077 control_csawmg_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 257.122923
-0:The maximum resident set size (KB)                   = 674732
+0:The total amount of wall time                        = 257.288360
+0:The maximum resident set size (KB)                   = 673804
 
-Test 078 control_csawmg_debug PASS
+Test 077 control_csawmg_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_csawmgt_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_csawmgt_debug
-Checking test 079 control_csawmgt_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_csawmgt_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_csawmgt_debug
+Checking test 078 control_csawmgt_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 253.430918
-0:The maximum resident set size (KB)                   = 675652
+0:The total amount of wall time                        = 252.303684
+0:The maximum resident set size (KB)                   = 674796
 
-Test 079 control_csawmgt_debug PASS
+Test 078 control_csawmgt_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_ras_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_ras_debug
-Checking test 080 control_ras_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_ras_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_ras_debug
+Checking test 079 control_ras_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 168.044406
-0:The maximum resident set size (KB)                   = 636400
+0:The total amount of wall time                        = 166.284126
+0:The maximum resident set size (KB)                   = 635964
 
-Test 080 control_ras_debug PASS
+Test 079 control_ras_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_diag_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_diag_debug
-Checking test 081 control_diag_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_diag_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_diag_debug
+Checking test 080 control_diag_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 170.203501
-0:The maximum resident set size (KB)                   = 682604
+0:The total amount of wall time                        = 169.380073
+0:The maximum resident set size (KB)                   = 681208
 
-Test 081 control_diag_debug PASS
+Test 080 control_diag_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_debug_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_debug_p8
-Checking test 082 control_debug_p8 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_debug_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_debug_p8
+Checking test 081 control_debug_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 186.535422
-0:The maximum resident set size (KB)                   = 1448800
+0:The total amount of wall time                        = 184.651388
+0:The maximum resident set size (KB)                   = 1447724
 
-Test 082 control_debug_p8 PASS
+Test 081 control_debug_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_debug
-Checking test 083 regional_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_debug
+Checking test 082 regional_debug results ....
  Comparing dynf000.nc .........OK
  Comparing dynf001.nc .........OK
  Comparing phyf000.nc .........OK
  Comparing phyf001.nc .........OK
 
-0:The total amount of wall time                        = 1037.166682
-0:The maximum resident set size (KB)                   = 626280
+0:The total amount of wall time                        = 1037.772181
+0:The maximum resident set size (KB)                   = 625732
 
-Test 083 regional_debug PASS
+Test 082 regional_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control_debug
-Checking test 084 rap_control_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control_debug
+Checking test 083 rap_control_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 295.916133
-0:The maximum resident set size (KB)                   = 994196
+0:The total amount of wall time                        = 294.507985
+0:The maximum resident set size (KB)                   = 993328
 
-Test 084 rap_control_debug PASS
+Test 083 rap_control_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_debug
-Checking test 085 hrrr_control_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_debug
+Checking test 084 hrrr_control_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 291.777762
-0:The maximum resident set size (KB)                   = 992608
+0:The total amount of wall time                        = 289.127337
+0:The maximum resident set size (KB)                   = 992216
 
-Test 085 hrrr_control_debug PASS
+Test 084 hrrr_control_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_unified_drag_suite_debug
-Checking test 086 rap_unified_drag_suite_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_unified_drag_suite_debug
+Checking test 085 rap_unified_drag_suite_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 296.455551
-0:The maximum resident set size (KB)                   = 993800
+0:The total amount of wall time                        = 293.943024
+0:The maximum resident set size (KB)                   = 993304
 
-Test 086 rap_unified_drag_suite_debug PASS
+Test 085 rap_unified_drag_suite_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_diag_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_diag_debug
-Checking test 087 rap_diag_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_diag_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_diag_debug
+Checking test 086 rap_diag_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 311.014938
-0:The maximum resident set size (KB)                   = 1078312
+0:The total amount of wall time                        = 309.144472
+0:The maximum resident set size (KB)                   = 1077516
 
-Test 087 rap_diag_debug PASS
+Test 086 rap_diag_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_cires_ugwp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_cires_ugwp_debug
-Checking test 088 rap_cires_ugwp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_cires_ugwp_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_cires_ugwp_debug
+Checking test 087 rap_cires_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 301.801040
-0:The maximum resident set size (KB)                   = 992788
+0:The total amount of wall time                        = 300.263020
+0:The maximum resident set size (KB)                   = 992088
 
-Test 088 rap_cires_ugwp_debug PASS
+Test 087 rap_cires_ugwp_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_cires_ugwp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_unified_ugwp_debug
-Checking test 089 rap_unified_ugwp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_cires_ugwp_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_unified_ugwp_debug
+Checking test 088 rap_unified_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 301.930807
-0:The maximum resident set size (KB)                   = 994604
+0:The total amount of wall time                        = 299.931848
+0:The maximum resident set size (KB)                   = 994148
 
-Test 089 rap_unified_ugwp_debug PASS
+Test 088 rap_unified_ugwp_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_lndp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_lndp_debug
-Checking test 090 rap_lndp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_lndp_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_lndp_debug
+Checking test 089 rap_lndp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 298.402142
-0:The maximum resident set size (KB)                   = 994900
+0:The total amount of wall time                        = 296.752745
+0:The maximum resident set size (KB)                   = 993996
 
-Test 090 rap_lndp_debug PASS
+Test 089 rap_lndp_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_flake_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_flake_debug
-Checking test 091 rap_flake_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_flake_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_flake_debug
+Checking test 090 rap_flake_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 295.485897
-0:The maximum resident set size (KB)                   = 993648
+0:The total amount of wall time                        = 293.716295
+0:The maximum resident set size (KB)                   = 993376
 
-Test 091 rap_flake_debug PASS
+Test 090 rap_flake_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_progcld_thompson_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_progcld_thompson_debug
-Checking test 092 rap_progcld_thompson_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_progcld_thompson_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_progcld_thompson_debug
+Checking test 091 rap_progcld_thompson_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 296.150478
-0:The maximum resident set size (KB)                   = 994128
+0:The total amount of wall time                        = 294.666035
+0:The maximum resident set size (KB)                   = 993436
 
-Test 092 rap_progcld_thompson_debug PASS
+Test 091 rap_progcld_thompson_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_noah_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_noah_debug
-Checking test 093 rap_noah_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_noah_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_noah_debug
+Checking test 092 rap_noah_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 290.643432
-0:The maximum resident set size (KB)                   = 993852
+0:The total amount of wall time                        = 288.661643
+0:The maximum resident set size (KB)                   = 993296
 
-Test 093 rap_noah_debug PASS
+Test 092 rap_noah_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_rrtmgp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_rrtmgp_debug
-Checking test 094 rap_rrtmgp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_sfcdiff_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_sfcdiff_debug
+Checking test 093 rap_sfcdiff_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 492.771699
-0:The maximum resident set size (KB)                   = 1122744
+0:The total amount of wall time                        = 295.248171
+0:The maximum resident set size (KB)                   = 994560
 
-Test 094 rap_rrtmgp_debug PASS
+Test 093 rap_sfcdiff_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_sfcdiff_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_sfcdiff_debug
-Checking test 095 rap_sfcdiff_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_noah_sfcdiff_cires_ugwp_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_noah_sfcdiff_cires_ugwp_debug
+Checking test 094 rap_noah_sfcdiff_cires_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 295.884270
-0:The maximum resident set size (KB)                   = 995144
+0:The total amount of wall time                        = 479.714446
+0:The maximum resident set size (KB)                   = 992328
 
-Test 095 rap_sfcdiff_debug PASS
+Test 094 rap_noah_sfcdiff_cires_ugwp_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_noah_sfcdiff_cires_ugwp_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_noah_sfcdiff_cires_ugwp_debug
-Checking test 096 rap_noah_sfcdiff_cires_ugwp_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rrfs_v1beta_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rrfs_v1beta_debug
+Checking test 095 rrfs_v1beta_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 480.123422
-0:The maximum resident set size (KB)                   = 993432
+0:The total amount of wall time                        = 290.185367
+0:The maximum resident set size (KB)                   = 989552
 
-Test 096 rap_noah_sfcdiff_cires_ugwp_debug PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rrfs_v1beta_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rrfs_v1beta_debug
-Checking test 097 rrfs_v1beta_debug results ....
- Comparing sfcf000.nc .........OK
- Comparing sfcf001.nc .........OK
- Comparing atmf000.nc .........OK
- Comparing atmf001.nc .........OK
-
-0:The total amount of wall time                        = 290.906917
-0:The maximum resident set size (KB)                   = 989840
-
-Test 097 rrfs_v1beta_debug PASS
+Test 095 rrfs_v1beta_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_wam_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_wam_debug
-Checking test 098 control_wam_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_wam_debug
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_wam_debug
+Checking test 096 control_wam_debug results ....
  Comparing sfcf019.nc .........OK
  Comparing atmf019.nc .........OK
 
-0:The total amount of wall time                        = 296.407407
-0:The maximum resident set size (KB)                   = 241512
+0:The total amount of wall time                        = 297.662566
+0:The maximum resident set size (KB)                   = 241304
 
-Test 098 control_wam_debug PASS
+Test 096 control_wam_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_spp_sppt_shum_skeb_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_spp_sppt_shum_skeb_dyn32_phy32
-Checking test 099 regional_spp_sppt_shum_skeb_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_spp_sppt_shum_skeb_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_spp_sppt_shum_skeb_dyn32_phy32
+Checking test 097 regional_spp_sppt_shum_skeb_dyn32_phy32 results ....
  Comparing dynf000.nc .........OK
  Comparing dynf001.nc .........OK
  Comparing phyf000.nc .........OK
@@ -3288,15 +3221,15 @@ Checking test 099 regional_spp_sppt_shum_skeb_dyn32_phy32 results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF01 .........OK
 
-0:The total amount of wall time                        = 301.391018
-0:The maximum resident set size (KB)                   = 850508
+0:The total amount of wall time                        = 303.378454
+0:The maximum resident set size (KB)                   = 850536
 
-Test 099 regional_spp_sppt_shum_skeb_dyn32_phy32 PASS
+Test 097 regional_spp_sppt_shum_skeb_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control_dyn32_phy32
-Checking test 100 rap_control_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control_dyn32_phy32
+Checking test 098 rap_control_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3342,15 +3275,15 @@ Checking test 100 rap_control_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 386.410060
-0:The maximum resident set size (KB)                   = 710588
+0:The total amount of wall time                        = 386.544114
+0:The maximum resident set size (KB)                   = 710616
 
-Test 100 rap_control_dyn32_phy32 PASS
+Test 098 rap_control_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_dyn32_phy32
-Checking test 101 hrrr_control_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_dyn32_phy32
+Checking test 099 hrrr_control_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3396,15 +3329,15 @@ Checking test 101 hrrr_control_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 205.501339
-0:The maximum resident set size (KB)                   = 709120
+0:The total amount of wall time                        = 203.589087
+0:The maximum resident set size (KB)                   = 708828
 
-Test 101 hrrr_control_dyn32_phy32 PASS
+Test 099 hrrr_control_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_2threads_dyn32_phy32
-Checking test 102 rap_2threads_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_2threads_dyn32_phy32
+Checking test 100 rap_2threads_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3450,15 +3383,15 @@ Checking test 102 rap_2threads_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 375.996300
-0:The maximum resident set size (KB)                   = 765184
+0:The total amount of wall time                        = 373.896987
+0:The maximum resident set size (KB)                   = 760516
 
-Test 102 rap_2threads_dyn32_phy32 PASS
+Test 100 rap_2threads_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_2threads_dyn32_phy32
-Checking test 103 hrrr_control_2threads_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_2threads_dyn32_phy32
+Checking test 101 hrrr_control_2threads_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3504,15 +3437,15 @@ Checking test 103 hrrr_control_2threads_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 202.734194
-0:The maximum resident set size (KB)                   = 762760
+0:The total amount of wall time                        = 201.934064
+0:The maximum resident set size (KB)                   = 762712
 
-Test 103 hrrr_control_2threads_dyn32_phy32 PASS
+Test 101 hrrr_control_2threads_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_decomp_dyn32_phy32
-Checking test 104 hrrr_control_decomp_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_decomp_dyn32_phy32
+Checking test 102 hrrr_control_decomp_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3558,15 +3491,15 @@ Checking test 104 hrrr_control_decomp_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 216.128586
-0:The maximum resident set size (KB)                   = 708136
+0:The total amount of wall time                        = 215.087567
+0:The maximum resident set size (KB)                   = 708060
 
-Test 104 hrrr_control_decomp_dyn32_phy32 PASS
+Test 102 hrrr_control_decomp_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_restart_dyn32_phy32
-Checking test 105 rap_restart_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_restart_dyn32_phy32
+Checking test 103 rap_restart_dyn32_phy32 results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -3604,15 +3537,15 @@ Checking test 105 rap_restart_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 291.708109
-0:The maximum resident set size (KB)                   = 547472
+0:The total amount of wall time                        = 292.583792
+0:The maximum resident set size (KB)                   = 547700
 
-Test 105 rap_restart_dyn32_phy32 PASS
+Test 103 rap_restart_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_restart_dyn32_phy32
-Checking test 106 hrrr_control_restart_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_restart_dyn32_phy32
+Checking test 104 hrrr_control_restart_dyn32_phy32 results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -3650,15 +3583,15 @@ Checking test 106 hrrr_control_restart_dyn32_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 105.556469
-0:The maximum resident set size (KB)                   = 543936
+0:The total amount of wall time                        = 105.358518
+0:The maximum resident set size (KB)                   = 543872
 
-Test 106 hrrr_control_restart_dyn32_phy32 PASS
+Test 104 hrrr_control_restart_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_dyn64_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control_dyn64_phy32
-Checking test 107 rap_control_dyn64_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_dyn64_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control_dyn64_phy32
+Checking test 105 rap_control_dyn64_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -3704,82 +3637,82 @@ Checking test 107 rap_control_dyn64_phy32 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 269.590319
-0:The maximum resident set size (KB)                   = 731780
+0:The total amount of wall time                        = 258.306507
+0:The maximum resident set size (KB)                   = 731784
 
-Test 107 rap_control_dyn64_phy32 PASS
+Test 105 rap_control_dyn64_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_debug_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control_debug_dyn32_phy32
-Checking test 108 rap_control_debug_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_debug_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control_debug_dyn32_phy32
+Checking test 106 rap_control_debug_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 289.078508
-0:The maximum resident set size (KB)                   = 879800
+0:The total amount of wall time                        = 288.252753
+0:The maximum resident set size (KB)                   = 879716
 
-Test 108 rap_control_debug_dyn32_phy32 PASS
+Test 106 rap_control_debug_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hrrr_control_debug_dyn32_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hrrr_control_debug_dyn32_phy32
-Checking test 109 hrrr_control_debug_dyn32_phy32 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hrrr_control_debug_dyn32_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hrrr_control_debug_dyn32_phy32
+Checking test 107 hrrr_control_debug_dyn32_phy32 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 284.920892
-0:The maximum resident set size (KB)                   = 878544
+0:The total amount of wall time                        = 284.808102
+0:The maximum resident set size (KB)                   = 878628
 
-Test 109 hrrr_control_debug_dyn32_phy32 PASS
+Test 107 hrrr_control_debug_dyn32_phy32 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/rap_control_debug_dyn64_phy32
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/rap_control_dyn64_phy32_debug
-Checking test 110 rap_control_dyn64_phy32_debug results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/rap_control_debug_dyn64_phy32
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/rap_control_dyn64_phy32_debug
+Checking test 108 rap_control_dyn64_phy32_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-0:The total amount of wall time                        = 293.492936
-0:The maximum resident set size (KB)                   = 896708
+0:The total amount of wall time                        = 292.938666
+0:The maximum resident set size (KB)                   = 896720
 
-Test 110 rap_control_dyn64_phy32_debug PASS
+Test 108 rap_control_dyn64_phy32_debug PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_atm
-Checking test 111 hafs_regional_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_atm
+Checking test 109 hafs_regional_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing HURPRS.GrbF06 .........OK
 
-0:The total amount of wall time                        = 273.226223
-0:The maximum resident set size (KB)                   = 713264
+0:The total amount of wall time                        = 270.418086
+0:The maximum resident set size (KB)                   = 713476
 
-Test 111 hafs_regional_atm PASS
+Test 109 hafs_regional_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_atm_thompson_gfdlsf
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_atm_thompson_gfdlsf
-Checking test 112 hafs_regional_atm_thompson_gfdlsf results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_atm_thompson_gfdlsf
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_atm_thompson_gfdlsf
+Checking test 110 hafs_regional_atm_thompson_gfdlsf results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
 
-0:The total amount of wall time                        = 310.343620
-0:The maximum resident set size (KB)                   = 1071580
+0:The total amount of wall time                        = 295.010238
+0:The maximum resident set size (KB)                   = 1072732
 
-Test 112 hafs_regional_atm_thompson_gfdlsf PASS
+Test 110 hafs_regional_atm_thompson_gfdlsf PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_atm_ocn
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_atm_ocn
-Checking test 113 hafs_regional_atm_ocn results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_atm_ocn
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_atm_ocn
+Checking test 111 hafs_regional_atm_ocn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing archv.2019_241_06.a .........OK
@@ -3787,15 +3720,15 @@ Checking test 113 hafs_regional_atm_ocn results ....
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
 
-0:The total amount of wall time                        = 455.444115
-0:The maximum resident set size (KB)                   = 721888
+0:The total amount of wall time                        = 456.865475
+0:The maximum resident set size (KB)                   = 721368
 
-Test 113 hafs_regional_atm_ocn PASS
+Test 111 hafs_regional_atm_ocn PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_atm_wav
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_atm_wav
-Checking test 114 hafs_regional_atm_wav results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_atm_wav
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_atm_wav
+Checking test 112 hafs_regional_atm_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing out_grd.ww3 .........OK
@@ -3803,15 +3736,15 @@ Checking test 114 hafs_regional_atm_wav results ....
  Comparing 20190829.060000.restart.ww3 .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
 
-0:The total amount of wall time                        = 1056.437377
-0:The maximum resident set size (KB)                   = 751264
+0:The total amount of wall time                        = 1036.589161
+0:The maximum resident set size (KB)                   = 751464
 
-Test 114 hafs_regional_atm_wav PASS
+Test 112 hafs_regional_atm_wav PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_atm_ocn_wav
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_atm_ocn_wav
-Checking test 115 hafs_regional_atm_ocn_wav results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_atm_ocn_wav
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_atm_ocn_wav
+Checking test 113 hafs_regional_atm_ocn_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing archv.2019_241_06.a .........OK
@@ -3821,29 +3754,29 @@ Checking test 115 hafs_regional_atm_ocn_wav results ....
  Comparing 20190829.060000.restart.ww3 .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
 
-0:The total amount of wall time                        = 1097.858198
-0:The maximum resident set size (KB)                   = 771800
+0:The total amount of wall time                        = 1087.480965
+0:The maximum resident set size (KB)                   = 770968
 
-Test 115 hafs_regional_atm_ocn_wav PASS
+Test 113 hafs_regional_atm_ocn_wav PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_1nest_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_1nest_atm
-Checking test 116 hafs_regional_1nest_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_1nest_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_1nest_atm
+Checking test 114 hafs_regional_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc .........OK
 
-0:The total amount of wall time                        = 409.544013
-0:The maximum resident set size (KB)                   = 291064
+0:The total amount of wall time                        = 405.026253
+0:The maximum resident set size (KB)                   = 290932
 
-Test 116 hafs_regional_1nest_atm PASS
+Test 114 hafs_regional_1nest_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_telescopic_2nests_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_telescopic_2nests_atm
-Checking test 117 hafs_regional_telescopic_2nests_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_telescopic_2nests_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_telescopic_2nests_atm
+Checking test 115 hafs_regional_telescopic_2nests_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3851,29 +3784,29 @@ Checking test 117 hafs_regional_telescopic_2nests_atm results ....
  Comparing atm.nest03.f006.nc .........OK
  Comparing sfc.nest03.f006.nc .........OK
 
-0:The total amount of wall time                        = 460.265061
-0:The maximum resident set size (KB)                   = 304124
+0:The total amount of wall time                        = 454.940909
+0:The maximum resident set size (KB)                   = 304052
 
-Test 117 hafs_regional_telescopic_2nests_atm PASS
+Test 115 hafs_regional_telescopic_2nests_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_global_1nest_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_global_1nest_atm
-Checking test 118 hafs_global_1nest_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_global_1nest_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_global_1nest_atm
+Checking test 116 hafs_global_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc .........OK
 
-0:The total amount of wall time                        = 183.839598
-0:The maximum resident set size (KB)                   = 205132
+0:The total amount of wall time                        = 183.209368
+0:The maximum resident set size (KB)                   = 205028
 
-Test 118 hafs_global_1nest_atm PASS
+Test 116 hafs_global_1nest_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_global_multiple_4nests_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_global_multiple_4nests_atm
-Checking test 119 hafs_global_multiple_4nests_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_global_multiple_4nests_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_global_multiple_4nests_atm
+Checking test 117 hafs_global_multiple_4nests_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3890,15 +3823,15 @@ Checking test 119 hafs_global_multiple_4nests_atm results ....
  Comparing HURPRS.GrbF06.nest04 .........OK
  Comparing HURPRS.GrbF06.nest05 .........OK
 
-0:The total amount of wall time                        = 522.939882
-0:The maximum resident set size (KB)                   = 289164
+0:The total amount of wall time                        = 508.452965
+0:The maximum resident set size (KB)                   = 289100
 
-Test 119 hafs_global_multiple_4nests_atm PASS
+Test 117 hafs_global_multiple_4nests_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_specified_moving_1nest_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_specified_moving_1nest_atm
-Checking test 120 hafs_regional_specified_moving_1nest_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_specified_moving_1nest_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_specified_moving_1nest_atm
+Checking test 118 hafs_regional_specified_moving_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3906,29 +3839,29 @@ Checking test 120 hafs_regional_specified_moving_1nest_atm results ....
  Comparing HURPRS.GrbF06 .........OK
  Comparing HURPRS.GrbF06.nest02 .........OK
 
-0:The total amount of wall time                        = 254.496820
-0:The maximum resident set size (KB)                   = 305760
+0:The total amount of wall time                        = 253.429418
+0:The maximum resident set size (KB)                   = 306724
 
-Test 120 hafs_regional_specified_moving_1nest_atm PASS
+Test 118 hafs_regional_specified_moving_1nest_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_storm_following_1nest_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_storm_following_1nest_atm
-Checking test 121 hafs_regional_storm_following_1nest_atm results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_storm_following_1nest_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_storm_following_1nest_atm
+Checking test 119 hafs_regional_storm_following_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc .........OK
 
-0:The total amount of wall time                        = 241.895860
-0:The maximum resident set size (KB)                   = 305396
+0:The total amount of wall time                        = 241.888451
+0:The maximum resident set size (KB)                   = 306736
 
-Test 121 hafs_regional_storm_following_1nest_atm PASS
+Test 119 hafs_regional_storm_following_1nest_atm PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_storm_following_1nest_atm_ocn
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_storm_following_1nest_atm_ocn
-Checking test 122 hafs_regional_storm_following_1nest_atm_ocn results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_storm_following_1nest_atm_ocn
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_storm_following_1nest_atm_ocn
+Checking test 120 hafs_regional_storm_following_1nest_atm_ocn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3936,15 +3869,29 @@ Checking test 122 hafs_regional_storm_following_1nest_atm_ocn results ....
  Comparing archv.2020_238_18.a .........OK
  Comparing archs.2020_238_18.a .........OK
 
-0:The total amount of wall time                        = 283.364881
-0:The maximum resident set size (KB)                   = 352880
+0:The total amount of wall time                        = 284.845813
+0:The maximum resident set size (KB)                   = 352200
 
-Test 122 hafs_regional_storm_following_1nest_atm_ocn PASS
+Test 120 hafs_regional_storm_following_1nest_atm_ocn PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_storm_following_1nest_atm_ocn_wav
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_storm_following_1nest_atm_ocn_wav
-Checking test 123 hafs_regional_storm_following_1nest_atm_ocn_wav results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_global_storm_following_1nest_atm
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_global_storm_following_1nest_atm
+Checking test 121 hafs_global_storm_following_1nest_atm results ....
+ Comparing atmf006.nc .........OK
+ Comparing sfcf006.nc .........OK
+ Comparing atm.nest02.f006.nc .........OK
+ Comparing sfc.nest02.f006.nc .........OK
+
+0:The total amount of wall time                        = 69.439262
+0:The maximum resident set size (KB)                   = 220260
+
+Test 121 hafs_global_storm_following_1nest_atm PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_storm_following_1nest_atm_ocn_wav
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_storm_following_1nest_atm_ocn_wav
+Checking test 122 hafs_regional_storm_following_1nest_atm_ocn_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3954,176 +3901,162 @@ Checking test 123 hafs_regional_storm_following_1nest_atm_ocn_wav results ....
  Comparing out_grd.ww3 .........OK
  Comparing out_pnt.ww3 .........OK
 
-0:The total amount of wall time                        = 756.339822
-0:The maximum resident set size (KB)                   = 414864
+0:The total amount of wall time                        = 762.033201
+0:The maximum resident set size (KB)                   = 413736
 
-Test 123 hafs_regional_storm_following_1nest_atm_ocn_wav PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_global_storm_following_1nest_atm
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_global_storm_following_1nest_atm
-Checking test 124 hafs_global_storm_following_1nest_atm results ....
- Comparing atmf006.nc .........OK
- Comparing sfcf006.nc .........OK
- Comparing atm.nest02.f006.nc .........OK
- Comparing sfc.nest02.f006.nc .........OK
-
-0:The total amount of wall time                        = 69.953142
-0:The maximum resident set size (KB)                   = 220408
-
-Test 124 hafs_global_storm_following_1nest_atm PASS
+Test 122 hafs_regional_storm_following_1nest_atm_ocn_wav PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_docn
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_docn
-Checking test 125 hafs_regional_docn results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_docn
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_docn
+Checking test 123 hafs_regional_docn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.docn.r.2019-08-29-21600.nc .........OK
 
-0:The total amount of wall time                        = 429.663156
-0:The maximum resident set size (KB)                   = 738540
+0:The total amount of wall time                        = 422.097440
+0:The maximum resident set size (KB)                   = 738876
 
-Test 125 hafs_regional_docn PASS
+Test 123 hafs_regional_docn PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_docn_oisst
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_docn_oisst
-Checking test 126 hafs_regional_docn_oisst results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_docn_oisst
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_docn_oisst
+Checking test 124 hafs_regional_docn_oisst results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.docn.r.2019-08-29-21600.nc .........OK
 
-0:The total amount of wall time                        = 429.300039
-0:The maximum resident set size (KB)                   = 720620
+0:The total amount of wall time                        = 420.630525
+0:The maximum resident set size (KB)                   = 716252
 
-Test 126 hafs_regional_docn_oisst PASS
+Test 124 hafs_regional_docn_oisst PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/hafs_regional_datm_cdeps
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/hafs_regional_datm_cdeps
-Checking test 127 hafs_regional_datm_cdeps results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/hafs_regional_datm_cdeps
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/hafs_regional_datm_cdeps
+Checking test 125 hafs_regional_datm_cdeps results ....
  Comparing ufs.hafs.cpl.hi.2019-08-30-00000.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-30-00000.nc .........OK
  Comparing ufs.hafs.datm.r.2019-08-30-00000.nc .........OK
 
-0:The total amount of wall time                        = 1160.325565
-0:The maximum resident set size (KB)                   = 891028
+0:The total amount of wall time                        = 1152.706714
+0:The maximum resident set size (KB)                   = 891408
 
-Test 127 hafs_regional_datm_cdeps PASS
+Test 125 hafs_regional_datm_cdeps PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_control_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_control_cfsr
-Checking test 128 datm_cdeps_control_cfsr results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_control_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_control_cfsr
+Checking test 126 datm_cdeps_control_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
-0:The total amount of wall time                        = 168.134123
-0:The maximum resident set size (KB)                   = 731404
-
-Test 128 datm_cdeps_control_cfsr PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_control_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_restart_cfsr
-Checking test 129 datm_cdeps_restart_cfsr results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 101.654725
-0:The maximum resident set size (KB)                   = 719592
-
-Test 129 datm_cdeps_restart_cfsr PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_control_gefs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_control_gefs
-Checking test 130 datm_cdeps_control_gefs results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 161.982837
-0:The maximum resident set size (KB)                   = 610964
-
-Test 130 datm_cdeps_control_gefs PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_iau_gefs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_iau_gefs
-Checking test 131 datm_cdeps_iau_gefs results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 160.893264
-0:The maximum resident set size (KB)                   = 610984
-
-Test 131 datm_cdeps_iau_gefs PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_stochy_gefs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_stochy_gefs
-Checking test 132 datm_cdeps_stochy_gefs results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 160.024767
-0:The maximum resident set size (KB)                   = 610964
-
-Test 132 datm_cdeps_stochy_gefs PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_ciceC_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_ciceC_cfsr
-Checking test 133 datm_cdeps_ciceC_cfsr results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 169.388678
-0:The maximum resident set size (KB)                   = 731708
-
-Test 133 datm_cdeps_ciceC_cfsr PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_bulk_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_bulk_cfsr
-Checking test 134 datm_cdeps_bulk_cfsr results ....
- Comparing RESTART/MOM.res.nc .........OK
- Comparing RESTART/iced.2011-10-02-00000.nc .........OK
- Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
-
-0:The total amount of wall time                        = 169.215773
+0:The total amount of wall time                        = 169.088101
 0:The maximum resident set size (KB)                   = 720312
 
-Test 134 datm_cdeps_bulk_cfsr PASS
+Test 126 datm_cdeps_control_cfsr PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_bulk_gefs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_bulk_gefs
-Checking test 135 datm_cdeps_bulk_gefs results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_control_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_restart_cfsr
+Checking test 127 datm_cdeps_restart_cfsr results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 101.280886
+0:The maximum resident set size (KB)                   = 719572
+
+Test 127 datm_cdeps_restart_cfsr PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_control_gefs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_control_gefs
+Checking test 128 datm_cdeps_control_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
 
-0:The total amount of wall time                        = 162.111771
-0:The maximum resident set size (KB)                   = 610940
+0:The total amount of wall time                        = 161.052565
+0:The maximum resident set size (KB)                   = 610964
 
-Test 135 datm_cdeps_bulk_gefs PASS
+Test 128 datm_cdeps_control_gefs PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_mx025_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_mx025_cfsr
-Checking test 136 datm_cdeps_mx025_cfsr results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_iau_gefs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_iau_gefs
+Checking test 129 datm_cdeps_iau_gefs results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 165.509490
+0:The maximum resident set size (KB)                   = 611016
+
+Test 129 datm_cdeps_iau_gefs PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_stochy_gefs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_stochy_gefs
+Checking test 130 datm_cdeps_stochy_gefs results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 163.200773
+0:The maximum resident set size (KB)                   = 610976
+
+Test 130 datm_cdeps_stochy_gefs PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_ciceC_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_ciceC_cfsr
+Checking test 131 datm_cdeps_ciceC_cfsr results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 168.939915
+0:The maximum resident set size (KB)                   = 731444
+
+Test 131 datm_cdeps_ciceC_cfsr PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_bulk_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_bulk_cfsr
+Checking test 132 datm_cdeps_bulk_cfsr results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 163.403368
+0:The maximum resident set size (KB)                   = 731400
+
+Test 132 datm_cdeps_bulk_cfsr PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_bulk_gefs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_bulk_gefs
+Checking test 133 datm_cdeps_bulk_gefs results ....
+ Comparing RESTART/MOM.res.nc .........OK
+ Comparing RESTART/iced.2011-10-02-00000.nc .........OK
+ Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-02-00000.nc .........OK
+
+0:The total amount of wall time                        = 161.141497
+0:The maximum resident set size (KB)                   = 610980
+
+Test 133 datm_cdeps_bulk_gefs PASS
+
+
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_mx025_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_mx025_cfsr
+Checking test 134 datm_cdeps_mx025_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/MOM.res_1.nc .........OK
  Comparing RESTART/MOM.res_2.nc .........OK
@@ -4131,15 +4064,15 @@ Checking test 136 datm_cdeps_mx025_cfsr results ....
  Comparing RESTART/iced.2011-10-01-43200.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-01-43200.nc .........OK
 
-0:The total amount of wall time                        = 426.443773
+0:The total amount of wall time                        = 752.460271
 0:The maximum resident set size (KB)                   = 518140
 
-Test 136 datm_cdeps_mx025_cfsr PASS
+Test 134 datm_cdeps_mx025_cfsr PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_mx025_gefs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_mx025_gefs
-Checking test 137 datm_cdeps_mx025_gefs results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_mx025_gefs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_mx025_gefs
+Checking test 135 datm_cdeps_mx025_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/MOM.res_1.nc .........OK
  Comparing RESTART/MOM.res_2.nc .........OK
@@ -4147,65 +4080,65 @@ Checking test 137 datm_cdeps_mx025_gefs results ....
  Comparing RESTART/iced.2011-10-01-43200.nc .........OK
  Comparing RESTART/DATM_GEFS_NEW.cpl.r.2011-10-01-43200.nc .........OK
 
-0:The total amount of wall time                        = 885.583931
-0:The maximum resident set size (KB)                   = 498280
+0:The total amount of wall time                        = 747.934360
+0:The maximum resident set size (KB)                   = 498244
 
-Test 137 datm_cdeps_mx025_gefs PASS
+Test 135 datm_cdeps_mx025_gefs PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_control_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_multiple_files_cfsr
-Checking test 138 datm_cdeps_multiple_files_cfsr results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_control_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_multiple_files_cfsr
+Checking test 136 datm_cdeps_multiple_files_cfsr results ....
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
-0:The total amount of wall time                        = 168.813233
-0:The maximum resident set size (KB)                   = 731748
+0:The total amount of wall time                        = 167.057337
+0:The maximum resident set size (KB)                   = 720336
 
-Test 138 datm_cdeps_multiple_files_cfsr PASS
+Test 136 datm_cdeps_multiple_files_cfsr PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_3072x1536_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_3072x1536_cfsr
-Checking test 139 datm_cdeps_3072x1536_cfsr results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_3072x1536_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_3072x1536_cfsr
+Checking test 137 datm_cdeps_3072x1536_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR3072x1536.cpl.r.2011-10-02-00000.nc .........OK
 
-0:The total amount of wall time                        = 270.845116
-0:The maximum resident set size (KB)                   = 1945608
+0:The total amount of wall time                        = 239.545731
+0:The maximum resident set size (KB)                   = 1945656
 
-Test 139 datm_cdeps_3072x1536_cfsr PASS
+Test 137 datm_cdeps_3072x1536_cfsr PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_gfs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_gfs
-Checking test 140 datm_cdeps_gfs results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_gfs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_gfs
+Checking test 138 datm_cdeps_gfs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/DATM_GFS.cpl.r.2021-03-23-21600.nc .........OK
 
-0:The total amount of wall time                        = 256.844644
-0:The maximum resident set size (KB)                   = 1944792
+0:The total amount of wall time                        = 269.791557
+0:The maximum resident set size (KB)                   = 1943932
 
-Test 140 datm_cdeps_gfs PASS
+Test 138 datm_cdeps_gfs PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_debug_cfsr
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_debug_cfsr
-Checking test 141 datm_cdeps_debug_cfsr results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_debug_cfsr
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_debug_cfsr
+Checking test 139 datm_cdeps_debug_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-01-21600.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-01-21600.nc .........OK
 
-0:The total amount of wall time                        = 462.365235
-0:The maximum resident set size (KB)                   = 710252
+0:The total amount of wall time                        = 459.964765
+0:The maximum resident set size (KB)                   = 710216
 
-Test 141 datm_cdeps_debug_cfsr PASS
+Test 139 datm_cdeps_debug_cfsr PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_lnd_gswp3
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_lnd_gswp3
-Checking test 142 datm_cdeps_lnd_gswp3 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_lnd_gswp3
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_lnd_gswp3
+Checking test 140 datm_cdeps_lnd_gswp3 results ....
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile1.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile2.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile3.nc .........OK
@@ -4213,15 +4146,15 @@ Checking test 142 datm_cdeps_lnd_gswp3 results ....
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile5.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile6.nc .........OK
 
-0:The total amount of wall time                        = 12.164924
-0:The maximum resident set size (KB)                   = 216752
+0:The total amount of wall time                        = 10.432215
+0:The maximum resident set size (KB)                   = 212176
 
-Test 142 datm_cdeps_lnd_gswp3 PASS
+Test 140 datm_cdeps_lnd_gswp3 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/datm_cdeps_lnd_gswp3
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/datm_cdeps_lnd_gswp3_rst
-Checking test 143 datm_cdeps_lnd_gswp3_rst results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/datm_cdeps_lnd_gswp3
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/datm_cdeps_lnd_gswp3_rst
+Checking test 141 datm_cdeps_lnd_gswp3_rst results ....
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile1.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile2.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile3.nc .........OK
@@ -4229,15 +4162,15 @@ Checking test 143 datm_cdeps_lnd_gswp3_rst results ....
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile5.nc .........OK
  Comparing ufs.cpld.lnd.out.2000-01-02-00000.tile6.nc .........OK
 
-0:The total amount of wall time                        = 16.914797
-0:The maximum resident set size (KB)                   = 212264
+0:The total amount of wall time                        = 15.948985
+0:The maximum resident set size (KB)                   = 212236
 
-Test 143 datm_cdeps_lnd_gswp3_rst PASS
+Test 141 datm_cdeps_lnd_gswp3_rst PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_p8_atmlnd_sbs
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_p8_atmlnd_sbs
-Checking test 144 control_p8_atmlnd_sbs results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_p8_atmlnd_sbs
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_p8_atmlnd_sbs
+Checking test 142 control_p8_atmlnd_sbs results ....
  Comparing sfcf000.tile1.nc .........OK
  Comparing sfcf000.tile2.nc .........OK
  Comparing sfcf000.tile3.nc .........OK
@@ -4321,15 +4254,15 @@ Checking test 144 control_p8_atmlnd_sbs results ....
  Comparing ufs.cpld.lnd.out.2021-03-23-21600.tile5.nc .........OK
  Comparing ufs.cpld.lnd.out.2021-03-23-21600.tile6.nc .........OK
 
-0:The total amount of wall time                        = 233.954219
-0:The maximum resident set size (KB)                   = 1466220
+0:The total amount of wall time                        = 235.746099
+0:The maximum resident set size (KB)                   = 1466144
 
-Test 144 control_p8_atmlnd_sbs PASS
+Test 142 control_p8_atmlnd_sbs PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/control_atmwav
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/control_atmwav
-Checking test 145 control_atmwav results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/control_atmwav
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/control_atmwav
+Checking test 143 control_atmwav results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
  Comparing atmf000.nc .........OK
@@ -4372,15 +4305,15 @@ Checking test 145 control_atmwav results ....
  Comparing RESTART/sfc_data.tile6.nc .........OK
  Comparing 20210322.180000.restart.glo_1deg .........OK
 
-0:The total amount of wall time                        = 98.141604
-0:The maximum resident set size (KB)                   = 481764
+0:The total amount of wall time                        = 98.710814
+0:The maximum resident set size (KB)                   = 481784
 
-Test 145 control_atmwav PASS
+Test 143 control_atmwav PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/atmaero_control_p8
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/atmaero_control_p8
-Checking test 146 atmaero_control_p8 results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/atmaero_control_p8
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/atmaero_control_p8
+Checking test 144 atmaero_control_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -4423,15 +4356,15 @@ Checking test 146 atmaero_control_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 254.524570
-0:The maximum resident set size (KB)                   = 2706636
+0:The total amount of wall time                        = 252.879244
+0:The maximum resident set size (KB)                   = 2706564
 
-Test 146 atmaero_control_p8 PASS
+Test 144 atmaero_control_p8 PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/atmaero_control_p8_rad
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/atmaero_control_p8_rad
-Checking test 147 atmaero_control_p8_rad results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/atmaero_control_p8_rad
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/atmaero_control_p8_rad
+Checking test 145 atmaero_control_p8_rad results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -4474,15 +4407,15 @@ Checking test 147 atmaero_control_p8_rad results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 309.567651
-0:The maximum resident set size (KB)                   = 2761852
+0:The total amount of wall time                        = 304.508512
+0:The maximum resident set size (KB)                   = 2761348
 
-Test 147 atmaero_control_p8_rad PASS
+Test 145 atmaero_control_p8_rad PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/atmaero_control_p8_rad_micro
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/atmaero_control_p8_rad_micro
-Checking test 148 atmaero_control_p8_rad_micro results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/atmaero_control_p8_rad_micro
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/atmaero_control_p8_rad_micro
+Checking test 146 atmaero_control_p8_rad_micro results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -4525,15 +4458,15 @@ Checking test 148 atmaero_control_p8_rad_micro results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0:The total amount of wall time                        = 308.605177
-0:The maximum resident set size (KB)                   = 2767128
+0:The total amount of wall time                        = 307.392572
+0:The maximum resident set size (KB)                   = 2767116
 
-Test 148 atmaero_control_p8_rad_micro PASS
+Test 146 atmaero_control_p8_rad_micro PASS
 
 
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_atmaq
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_atmaq
-Checking test 149 regional_atmaq results ....
+baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230302/INTEL/regional_atmaq
+working dir  = /glade/scratch/dswales/FV3_RT/rt_58671/regional_atmaq
+Checking test 147 regional_atmaq results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf003.nc .........OK
  Comparing sfcf006.nc .........OK
@@ -4548,33 +4481,12 @@ Checking test 149 regional_atmaq results ....
  Comparing RESTART/phy_data.nc .........OK
  Comparing RESTART/sfc_data.nc .........OK
 
-0:The total amount of wall time                        = 1273.149873
-0:The maximum resident set size (KB)                   = 815080
+0:The total amount of wall time                        = 1176.071624
+0:The maximum resident set size (KB)                   = 814972
 
-Test 149 regional_atmaq PASS
-
-
-baseline dir = /glade/scratch/epicufsrt/GMTB/ufs-weather-model/RT/NCAR/main-20230209/INTEL/regional_atmaq_debug
-working dir  = /glade/scratch/dswales/FV3_RT/rt_19633/regional_atmaq_debug
-Checking test 150 regional_atmaq_debug results ....
- Comparing sfcf000.nc .........OK
- Comparing sfcf001.nc .........OK
- Comparing atmf000.nc .........OK
- Comparing atmf001.nc .........OK
- Comparing RESTART/coupler.res .........OK
- Comparing RESTART/fv_core.res.nc .........OK
- Comparing RESTART/fv_core.res.tile1.nc .........OK
- Comparing RESTART/fv_srf_wnd.res.tile1.nc .........OK
- Comparing RESTART/fv_tracer.res.tile1.nc .........OK
- Comparing RESTART/phy_data.nc .........OK
- Comparing RESTART/sfc_data.nc .........OK
-
-0:The total amount of wall time                        = 1903.400281
-0:The maximum resident set size (KB)                   = 967224
-
-Test 150 regional_atmaq_debug PASS
+Test 147 regional_atmaq PASS
 
 
 REGRESSION TEST WAS SUCCESSFUL
-Thu Feb 23 13:31:12 MST 2023
-Elapsed time: 01h:16m:51s. Have a nice day!
+Thu Mar  2 12:48:46 MST 2023
+Elapsed time: 01h:08m:40s. Have a nice day!
