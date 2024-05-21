@@ -437,7 +437,7 @@ export DIAG_TABLE=diag_table_gfsv16
 export FIELD_TABLE=field_table_gfsv16
 export FV3_RUN=control_run.IN
 export INPUT_NML=control.nml.IN
-export CCPP_SUITE=FV3_GFS_v16
+export CCPP_SUITE=Raven
 
 export DOGP_CLDOPTICS_LUT=.false.
 export DOGP_LWSCAT=.false.
