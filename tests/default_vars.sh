@@ -10,7 +10,7 @@
   THRD=1
 
   export INPES_atmaero=4
-  export JNPES_atmaero=8 
+  export JNPES_atmaero=8
   export WPG_atmaero=6
 
   export THRD_cpl_atmw=1
@@ -121,12 +121,12 @@ if [[ ${MACHINE_ID} = wcoss2 || ${MACHINE_ID} = acorn ]]; then
 
   export TPN=128
 
-  export INPES_dflt=3 
+  export INPES_dflt=3
   export JNPES_dflt=8
   export INPES_thrd=3
   export JNPES_thrd=4
   export INPES_c384=8
-  export JNPES_c384=6 
+  export JNPES_c384=6
   export THRD_c384=2
   export INPES_c768=8
   export JNPES_c768=16
@@ -144,7 +144,7 @@ elif [[ ${MACHINE_ID} = orion ]]; then
 
   export INPES_dflt=3
   export JNPES_dflt=8
-  export INPES_thrd=3 
+  export INPES_thrd=3
   export JNPES_thrd=4
   export INPES_c384=8
   export JNPES_c384=6
@@ -168,7 +168,7 @@ elif [[ ${MACHINE_ID} = hercules ]]; then
   export INPES_thrd=3
   export JNPES_thrd=4
   export INPES_c384=8
-  export JNPES_c384=6 
+  export JNPES_c384=6
   export THRD_c384=2
   export INPES_c768=8
   export JNPES_c768=16
@@ -187,10 +187,10 @@ elif [[ ${MACHINE_ID} = hera ]]; then
 
   export INPES_dflt=3
   export JNPES_dflt=8
-  export INPES_thrd=3 
+  export INPES_thrd=3
   export JNPES_thrd=4
   export INPES_c384=6
-  export JNPES_c384=8 
+  export JNPES_c384=8
   export THRD_c384=2
   export INPES_c768=8
   export JNPES_c768=16
@@ -274,7 +274,7 @@ elif [[ ${MACHINE_ID} = s4 ]]; then
 
   export TPN=32
 
-  export INPES_dflt=3 
+  export INPES_dflt=3
   export JNPES_dflt=8
   export INPES_thrd=3
   export JNPES_thrd=4
@@ -325,10 +325,10 @@ elif [[ ${MACHINE_ID} = derecho ]]; then
   export TPN=128
   export INPES_dflt=3
   export JNPES_dflt=8
-  export INPES_thrd=3 
+  export INPES_thrd=3
   export JNPES_thrd=4
   export INPES_c384=8
-  export JNPES_c384=6 
+  export JNPES_c384=6
   export THRD_c384=2
   export INPES_c768=8
   export JNPES_c768=16
@@ -419,6 +419,7 @@ export CMP_DATAONLY=false
 # Defaults for ufs.configure
 export esmf_logkind="ESMF_LOGKIND_MULTI"
 export DumpFields="false"
+export MED_history_n=1000000
 
 export_fv3_v16 ()
 {
@@ -492,15 +493,22 @@ export UFS_CONFIGURE=ufs.configure.atm_esmf.IN
 export MODEL_CONFIGURE=model_configure.IN
 export atm_model=fv3
 
+export POST_ITAG=post_itag_gfs
+export POSTXCONFIG=postxconfig-NT-gfs.txt
+export POSTXCONFIG_FH00=postxconfig-NT-gfs_FH00.txt
+
 export FV3=true
 export S2S=false
 export HAFS=false
 export AQM=false
 export DATM_CDEPS=false
 export DOCN_CDEPS=false
+export DICE_CDEPS=false
+export CICE_PRESCRIBED=false
 export CDEPS_INLINE=false
 export POSTAPP='global'
 export USE_MERRA2=.true.
+export NESTED=.false.
 
 export NTILES=6
 export INPES=${INPES_dflt}
@@ -620,6 +628,8 @@ export DO_UGWP_V1_W_GSLDRAG=.false.
 export DO_UGWP_V0_OROG_ONLY=.false.
 export DO_GSL_DRAG_LS_BL=.false.
 export DO_GSL_DRAG_SS=.true.
+export DO_GWD_OPT_PSL=.false.
+export PSL_GWD_DX_FACTOR=6.0
 export DO_GSL_DRAG_TOFD=.false.
 export DO_UGWP_V1=.false.
 export DO_UGWP_V1_OROG_ONLY=.false.
@@ -758,6 +768,7 @@ export LDIAG3D=.false.
 export QDIAG3D=.false.
 export PRINT_DIFF_PGR=.false.
 export MAX_OUTPUT_FIELDS=310
+export UPDATE_FULL_OMEGA=.false.
 
 # Stochastic physics
 export STOCHINI=.false.
@@ -904,10 +915,13 @@ export_cice6() {
   export DT_CICE=${DT_ATMOS}
   export CICE_NPT=999
   export CICE_RUNTYPE=initial
+  export CICE_ICE_IC='cice_model.res.nc'
   export CICE_RUNID=unknown
   export CICE_USE_RESTART_TIME=.false.
   export CICE_RESTART_DIR=./RESTART/
   export CICE_RESTART_FILE=iced
+  # CICE6 warmstarts
+  export OCNICE_WARMSTART=.false.
 
   export CICE_RESTART_FORMAT='pnetcdf2'
   export CICE_RESTART_IOTASKS=-99
@@ -918,10 +932,6 @@ export_cice6() {
   export CICE_RESTART_DEFLATE=0
 
   export CICE_HISTORY_FORMAT='pnetcdf2'
-  if [[ ${MACHINE_ID} == wcoss2 ]]; then
-    export CICE_RESTART_FORMAT='hdf5'
-    export CICE_HISTORY_FORMAT='hdf5'
-  fi
   export CICE_HISTORY_IOTASKS=-99
   export CICE_HISTORY_REARR='box'
   export CICE_HISTORY_ROOT=-99
@@ -958,6 +968,12 @@ export_cice6() {
   export CICE_BLCKX
   export CICE_BLCKY
   export CICE_DECOMP=slenderX2
+
+  #ds2s
+  export MESH_DICE=none
+  export stream_files_dice=none
+  export CICE_PRESCRIBED=false
+  export DICE_CDEPS=false
 }
 
 # Defaults for the MOM6 model namelist, mx100
@@ -994,6 +1010,11 @@ export_mom6() {
   export PERT_EPBL=False
   export OCN_SPPT=-999.
   export EPBL=-999.
+  # MOM6 warmstarts
+  export OCNICE_WARMSTART=.false.
+  export MOM6_INIT_FROM_Z=True
+  export MOM6_INIT_UV="zero"
+  export MOM6_WARMSTART_FILE="none"
 }
 
 # Defaults for the WW3 global model
@@ -1036,6 +1057,7 @@ export_cmeps() {
   export RESTART_N=${FHMAX}
   export CMEPS_RESTART_DIR=./RESTART/
   export cap_dbug_flag=0
+  export WRITE_ENDOFRUN_RESTART=.false.
   # MOM6 attributes
   export use_coldstart=false
   export use_mommesh=true
@@ -1060,6 +1082,8 @@ export HAFS=false
 export AQM=false
 export DATM_CDEPS=false
 export DOCN_CDEPS=false
+export DICE_CDEPS=false
+export CICE_PRESCRIBED=false
 export CDEPS_INLINE=false
 export FV3BMIC='p8c'
 export BMIC=.false.
@@ -1089,6 +1113,12 @@ export NY_GLB=320
 export NPZ=127
 export NPZP=128
 
+# Use updated omega calculations if 
+#   hydrostatic is set to false
+if [[ "${HYDROSTATIC}" == .false. ]]; then
+  export UPDATE_FULL_OMEGA=.true.
+fi
+
 # default resources
 export DOMAINS_STACK_SIZE=8000000
 export INPES=${INPES_cpl_dflt}
@@ -1110,7 +1140,7 @@ export_mom6
 # Set WW3 component defaults
 export_ww3
 
-# Set CMEPS component defauls
+# Set CMEPS component defaults
 export_cmeps
 
 # FV3 defaults
@@ -1226,6 +1256,10 @@ export AOD_FRQ=060000
 export RESTART_FILE_PREFIX=''
 export RESTART_FILE_SUFFIX_SECS=''
 export RT35D=''
+
+#CDEPS ds2s
+export MESH_DICE=none
+export stream_files_dice=none
 }
 export_35d_run ()
 {
@@ -1287,7 +1321,7 @@ export_datm_cdeps ()
   export MOM6_USE_WAVES=False
   export WW3_DOMAIN=''
 
-  # Set CMEPS component defauls
+  # Set CMEPS component defaults
   export_cmeps
   # default configure
   export UFS_CONFIGURE=ufs.configure.datm_cdeps.IN
