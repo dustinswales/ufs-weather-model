@@ -138,3 +138,6 @@ export DOGP_LWSCAT=.true.
 export DOGP_SGS_CNV=.true.
 
 export SATMEDMF=.true.
+
+# COSP
+export DO_COSP_ISCCP=.true.

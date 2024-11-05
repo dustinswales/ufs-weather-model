@@ -165,6 +165,14 @@
 "gfs_phys",  "dvsfc",         "vflx_ave",    "fv3_history2d",         "all",  .false.,  "none",  2
 #"gfs_phys",  "cnvw",          "cnvcldwat",   "fv3_history2d",         "all",  .false.,  "none",  2
 
+#COSP
+"gfs_phys",  "CLDTOT_ISCCP",     "cldtot_isccp",     "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANCLDALB_ISCCP", "meancldalb_isccp", "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANPTOP_ISCCP",   "meanptop_isccp",   "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTAU_ISCCP",    "meantau_isccp",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTB_ISCCP",     "meantb_isccp",     "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTBCLR_ISCCP",  "meantbclr_isccp",  "fv3_history2d",  "all",  .false.,  "none",  2
+
 "gfs_phys",    "psurf",       "pressfc",   "fv3_history2d",  "all",  .false.,  "none",  2
 "gfs_phys",    "u10m",        "ugrd10m",   "fv3_history2d",  "all",  .false.,  "none",  2
 "gfs_phys",    "v10m",        "vgrd10m",   "fv3_history2d",  "all",  .false.,  "none",  2

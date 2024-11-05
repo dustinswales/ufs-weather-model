@@ -598,6 +598,7 @@ export ICLIQ_SW=2
 export IOVR=3
 export LFNC_K=-999
 export LFNC_P0=-999
+export DO_COSP_ISCCP=.false.
 
 # Microphysics
 export IMP_PHYSICS=8

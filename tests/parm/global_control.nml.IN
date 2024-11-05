@@ -223,6 +223,7 @@
   doGP_cldoptics_LUT = @[DOGP_CLDOPTICS_LUT]
   doGP_lwscat        = @[DOGP_LWSCAT]
   doGP_sgs_cnv       = @[DOGP_SGS_CNV]
+  do_cosp_isccp = @[DO_COSP_ISCCP]
   do_sppt      = @[DO_SPPT]
   do_shum      = @[DO_SHUM]
   do_skeb      = @[DO_SKEB]
