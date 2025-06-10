@@ -9,7 +9,7 @@ def rocoto_create_entries(RTPWD,MACHINE_ID,INPUTDATA_ROOT,INPUTDATA_ROOT_WW3,INP
 
     Args:
         RTPWD (str): Baseline directory
-        MACHINE_ID (str): Machine ID i.e., Hera, Gaea, Jet, etc.
+        MACHINE_ID (str): Machine ID i.e., Hera, GaeaC6, Jet, etc.
         INPUTDATA_ROOT (str): Input data directory
         INPUTDATA_ROOT_WW3 (str): WW3 input data directory
         INPUTDATA_ROOT_BMIC (str): BMIC input data directory
@@ -32,6 +32,7 @@ def rocoto_create_entries(RTPWD,MACHINE_ID,INPUTDATA_ROOT,INPUTDATA_ROOT_WW3,INP
   <!ENTITY INPUTDATA_ROOT "{INPUTDATA_ROOT}">
   <!ENTITY INPUTDATA_ROOT_WW3 "{INPUTDATA_ROOT_WW3}">
   <!ENTITY INPUTDATA_ROOT_BMIC "{INPUTDATA_ROOT_BMIC}">
+  <!ENTITY INPUTDATA_LM4 "{INPUTDATA_ROOT}/LM4_input_data">
   <!ENTITY RUNDIR_ROOT    "{RUNDIR_ROOT}">
   <!ENTITY NEW_BASELINE   "{NEW_BASELINE}">
 ]>
@@ -47,7 +48,7 @@ def rocoto_create_compile_task(MACHINE_ID,COMPILE_ID,ROCOTO_COMPILE_MAXTRIES,MAK
     """Generate and append compile task into Rocoto XML file
 
     Args:
-        MACHINE_ID (str): Machine ID i.e., Hera, Gaea, Jet, etc.
+        MACHINE_ID (str): Machine ID i.e., Hera, GaeaC6, Jet, etc.
         COMPILE_ID (str): Compile identifier e.g., s2swa_intel
         ROCOTO_COMPILE_MAXTRIES (str): Max attempts for compile
         MAKE_OPT (str): Make build options
@@ -64,7 +65,7 @@ def rocoto_create_compile_task(MACHINE_ID,COMPILE_ID,ROCOTO_COMPILE_MAXTRIES,MAK
     if ( MACHINE_ID == 'orion'): BUILD_WALLTIME="01:00:00"
     if ( MACHINE_ID == 'hercules'): BUILD_WALLTIME="01:00:00"
     if ( MACHINE_ID == 's4' ):   BUILD_WALLTIME="01:00:00"
-    if ( MACHINE_ID == 'gaea' ): BUILD_WALLTIME="01:00:00"
+    if ( MACHINE_ID == 'gaeac6' ): BUILD_WALLTIME="01:00:00"
     compile_task = f"""  <task name="compile_{COMPILE_ID}" maxtries="{ROCOTO_COMPILE_MAXTRIES}">
     <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "{MAKE_OPT}" {COMPILE_ID} 2>&amp;1 | tee &LOG;/compile_{COMPILE_ID}.log</\
 command>
@@ -72,9 +73,9 @@ command>
     <account>{ACCNR}</account>
     <queue>{COMPILE_QUEUE}</queue>
 """
-    if ( MACHINE_ID == 'gaea' ):
+    if ( MACHINE_ID == 'gaeac6' ):
         compile_task+=f"""    <native>--clusters=es</native>
-    <partition>eslogin_c5</partition>
+    <partition>eslogin_c6</partition>
 """
         PARTITION= ""
     if ( PARTITION != "" and MACHINE_ID != "hera" ):
@@ -195,6 +196,7 @@ export RTPWD={RTPWD}
 export INPUTDATA_ROOT={INPUTDATA_ROOT}
 export INPUTDATA_ROOT_WW3={INPUTDATA_ROOT_WW3}
 export INPUTDATA_ROOT_BMIC={INPUTDATA_ROOT_BMIC}
+export INPUTDATA_LM4={INPUTDATA_ROOT}/LM4_input_data
 export PATHRT={PATHRT}
 export PATHTR={PATHTR}
 export NEW_BASELINE={NEW_BASELINE}
@@ -216,8 +218,8 @@ export WLCLK={WLCLK}
 export RTVERBOSE=false
 """
     if ( MACHINE_ID == 'jet' ):
-         runtest_envs+="export PATH=/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/envs/ufs-weather-model/bin:/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/bin:$PATH"
-         runtest_envs+="export PYTHONPATH=/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/envs/ufs-weather-model/lib/python3.8/site-packages:/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/lib/python3.8/site-packages"
+        runtest_envs += f"export PATH=/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/envs/ufs-weather-model/bin:/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/bin:$PATH\n"
+        runtest_envs += f"export PYTHONPATH=/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/envs/ufs-weather-model/lib/python3.8/site-packages:/lfs4/HFIP/hfv3gfs/software/miniconda3/4.8.3/lib/python3.8/site-packages\n"
      
     with open(filename,"w+") as f:
         f.writelines(runtest_envs)
@@ -228,7 +230,7 @@ def make_loghead(ACCNR,MACHINE_ID,RUNDIR_ROOT,RTPWD,REGRESSIONTEST_LOG):
 
     Args:
         ACCNR (str): Account to run the job with
-        MACHINE_ID (str): Machine ID i.e. Hera, Gaea, Jet, etc.
+        MACHINE_ID (str): Machine ID i.e. Hera, GaeaC6, Jet, etc.
         RUNDIR_ROOT (str): Test run directory
         RTPWD (str): Baseline directory
         REGRESSIONTEST_LOG (str): Regression Test log filename
@@ -452,6 +454,10 @@ def xml_loop():
                                         rc_set_run_task = subprocess.Popen(['bash', '-c', '. ufs_test_utils.sh; set_run_task'])
                                         rc_set_run_task.wait()
                                         case_count+=1
+                                    if ('dependency' in config.keys() and 'baseline' in config.keys()):
+                                        rc_set_run_task = subprocess.Popen(['bash', '-c', '. ufs_test_utils.sh; set_run_task'])
+                                        rc_set_run_task.wait()
+                                        case_count+=1                                    
                                 else:
                                     rc_set_run_task = subprocess.Popen(['bash', '-c', '. ufs_test_utils.sh; set_run_task'])
                                     rc_set_run_task.wait()
