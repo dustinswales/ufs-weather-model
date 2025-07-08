@@ -2,12 +2,13 @@
 #
 #  Global control test GFSv16 atmosphere only at C96L127, P8 configuration
 #  with UGWPv1, i.e., GSL orographic drag + version 1 non-stationary GWD
+#  With COSPv2.0 cloud diagnostics
 #
 ###############################################################################
 
 export TEST_DESCR="Compare global control results with previous trunk version"
 
-export CNTL_DIR=control_p8_ugwpv1
+export CNTL_DIR=control_p8_ugwpv1_cosp
 
 export LIST_FILES="sfcf000.nc \
                    sfcf021.nc \
@@ -128,7 +129,7 @@ export WRITE_NSFLIP=.true.
 export FV3_RUN=control_run.IN
 export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
 export FIELD_TABLE=field_table_thompson_noaero_tke
-export DIAG_TABLE=diag_table_cpld.IN
+export DIAG_TABLE=diag_table_cpld_cosp.IN
 export INPUT_NML=global_control.nml.IN
 
 # RRTMGP
@@ -141,3 +142,7 @@ export K_SPLIT=2
 export N_SPLIT=4
 
 export SATMEDMF=.true.
+
+# COSP
+export DO_COSP_ISCCP=.true.
+export DO_COSP_MODIS=.true.

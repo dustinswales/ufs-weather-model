@@ -165,6 +165,33 @@
 "gfs_phys",  "dvsfc",         "vflx_ave",    "fv3_history2d",         "all",  .false.,  "none",  2
 #"gfs_phys",  "cnvw",          "cnvcldwat",   "fv3_history2d",         "all",  .false.,  "none",  2
 
+# COSP ISCCP Diagnostics
+"gfs_phys",  "CLDTOT_ISCCP",     "cldtot_isccp",     "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANCLDALB_ISCCP", "meancldalb_isccp", "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANPTOP_ISCCP",   "meanptop_isccp",   "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTAU_ISCCP",    "meantau_isccp",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTB_ISCCP",     "meantb_isccp",     "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "MEANTBCLR_ISCCP",  "meantbclr_isccp",  "fv3_history2d",  "all",  .false.,  "none",  2
+
+# COSP MODIS Diagnostics
+"gfs_phys",  "CLTMODIS",         "clt_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "CLWMODIS",         "clw_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "CLIMODIS",         "cli_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "CLHMODIS",         "clh_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "CLMMODIS",         "clm_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "CLLMODIS",         "cll_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUTMODIS",        "taut_modis",       "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUWMODIS",        "tauw_modis",       "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUIMODIS",        "taui_modis",       "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUTLOGMODIS",     "tautlog_modis",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUWLOGMODIS",     "tauwlog_modis",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "TAUILOGMODIS",     "tauilog_modis",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "REFFCLWMODIS",     "reffclw_modis",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "REFFCLIMODIS",     "reffcli_modis",    "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "PCTMODIS",         "pct_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "LWPMODIS",         "lwp_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+"gfs_phys",  "IWPMODIS",         "iwp_modis",        "fv3_history2d",  "all",  .false.,  "none",  2
+
 "gfs_phys",    "psurf",       "pressfc",   "fv3_history2d",  "all",  .false.,  "none",  2
 "gfs_phys",    "u10m",        "ugrd10m",   "fv3_history2d",  "all",  .false.,  "none",  2
 "gfs_phys",    "v10m",        "vgrd10m",   "fv3_history2d",  "all",  .false.,  "none",  2
