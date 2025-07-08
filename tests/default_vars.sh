@@ -692,6 +692,8 @@ export HYBEDMF=.false.
 
 # COSP
 export DO_COSP_ISCCP=.false.
+export DO_COSP_MODIS=.false.
+export DO_COSP_MISR=.false.
 
 # Microphysics
 export IMP_PHYSICS=8
