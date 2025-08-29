@@ -32,9 +32,6 @@ export ESMF_RUNTIME_PROFILE=ON
 export ESMF_RUNTIME_PROFILE_OUTPUT="SUMMARY"
 export I_MPI_EXTRA_FILESYSTEM="ON"
 
-export FI_CXI_RX_MATCH_MODE=hybrid
-export FI_MR_HMEM=0
-
 # Avoid job errors because of filesystem synchronization delays
 sync && sleep 1
 
