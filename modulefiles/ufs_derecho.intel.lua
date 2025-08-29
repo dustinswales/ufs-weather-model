@@ -4,7 +4,7 @@ loads UFS Model prerequisites for NOAA Parallelworks/Intel
 
 setenv("LMOD_TMOD_FIND_FIRST","yes")
 prepend_path("MODULEPATH", "/glade/derecho/scratch/nperlin/spack-stack-R1.9.0/envs/ue-oneapi-2024.2.1/install/modulefiles/Core")
-prepend_path("MODULEPATH", "/glade/derecho/scratch/nperlin/spack-stack-R1.9.0/envs/ue-oneapi-2024.2.1/install/modulefiles/cray-mpich/8.1.29-56ro2ht/gcc/12.4.0")
+prepend_path("MODULEPATH", "/glade/derecho/scratch/nperlin/spack-stack-R1.9.0/envs/ue-oneapi-2024.2.1/install/modulefiles/cray-mpich/8.1.29-3sepg3g/gcc/12.4.0")
 
 -- unload("ncarcompilers")
 prepend_path("MODULEPATH", "/glade/derecho/scratch/nperlin/UFS-WM/ufs-weather-model/modulefiles/stack")
@@ -26,5 +26,15 @@ load("ufs-weather-model-env")
 load("sp/2.5.0")
 load("crtm/2.4.0.1")
 load("scotch/7.0.4")
+
+setenv("CC", "mpicc")
+setenv("CXX", "mpicxx")
+setenv("FC", "mpif90")
+setenv("I_MPI_CC", "icx")
+setenv("I_MPI_CXX", "icpx")
+setenv("I_MPI_F90", "ifort")
+
+setenv("CMAKE_Platform", "hera.intel")
+
 
 whatis("Description: UFS build environment")
