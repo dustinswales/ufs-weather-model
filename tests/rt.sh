@@ -946,7 +946,7 @@ case ${MACHINE_ID} in
       module load rocoto/1.3.7
     fi
     if [[ "${ECFLOW:-false}" == true ]] ; then
-      module use /glade/derecho/scratch/nperlin/spack-stack-R1.9.0/envs/ue-oneapi-2024.2.1/install/modulefiles/oneapi/2024.2.1
+      module use /glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/modulefiles/oneapi/2024.2.1
       module load stack-python/3.11.7
       module load ecflow/5.11.4
       ECF_HOST=$(hostname)

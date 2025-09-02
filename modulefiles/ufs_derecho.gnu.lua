@@ -3,7 +3,7 @@ loads UFS Model prerequisites for Derecho/GNU
 ]])
 
 setenv("LMOD_TMOD_FIND_FIRST","yes")
-prepend_path("MODULEPATH", "/glade/derecho/scratch/nperlin/spack-stack-R1.9.0/envs/ue-gcc-12.4/install/modulefiles/Core")
+prepend_path("MODULEPATH", "/glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-gcc-12.4/install/modulefiles/Core")
 
 unload("ncarcompilers")
 stack_gnu_ver=os.getenv("stack_gnu_ver") or "12.4.0"
