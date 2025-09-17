@@ -19,8 +19,6 @@ load(pathJoin("cmake", cmake_ver))
 stack_python_ver=os.getenv("stack_python_ver") or "3.11.7"
 load(pathJoin("stack-python", stack_python_ver))
 
-setenv("CMAKE_Platform", "derecho.intel")
-
 load("ufs-weather-model-env")
 load("sp/2.5.0")
 load("crtm/2.4.0.1")
@@ -33,7 +31,5 @@ setenv("I_MPI_CC", "icx")
 setenv("I_MPI_CXX", "icpx")
 setenv("I_MPI_F90", "ifort")
 
-setenv("CMAKE_Platform", "hera.intel")
-
-
+setenv("CMAKE_Platform", "derecho.intel")
 whatis("Description: UFS build environment")
