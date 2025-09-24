@@ -30,7 +30,6 @@ export OMP_NUM_THREADS=@[THRD]
 export ESMF_RUNTIME_COMPLIANCECHECK=OFF:depth=4
 export ESMF_RUNTIME_PROFILE=ON
 export ESMF_RUNTIME_PROFILE_OUTPUT="SUMMARY"
-export I_MPI_EXTRA_FILESYSTEM="ON"
 
 # Avoid job errors because of filesystem synchronization delays
 sync && sleep 1
@@ -42,7 +41,7 @@ if [ "${JOB_SHOULD_FAIL:-NO}" = WHEN_RUNNING ] ; then
     false
 fi
 
-mpiexec -n @[UFS_TASKS] -depth @[THRD] ./fv3.exe
+mpiexec -n @[TASKS] -depth @[THRD] ./fv3.exe
 
 echo "Model ended:    " `date`
 echo -n " $( date +%s )," >> job_timestamp.txt
