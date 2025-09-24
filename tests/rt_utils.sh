@@ -438,6 +438,9 @@ rocoto_create_compile_task() {
   if [[ ${MACHINE_ID} == gaeac6 ]]; then
     BUILD_WALLTIME="01:00:00"
   fi
+  if [[ ${MACHINE_ID} == derecho ]]; then
+    BUILD_WALLTIME="01:00:00"
+  fi
 
 
   cat << EOF >> "${ROCOTO_XML}"
