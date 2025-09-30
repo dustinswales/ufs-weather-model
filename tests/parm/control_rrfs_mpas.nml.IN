@@ -4,6 +4,7 @@
   ccpp_suite = '@[CCPP_SUITE]'
   ic_filename = '@[IC_FILENAME]'
   lbc_filename = '@[LBC_FILENAME]'
+  regional = .true.
 /
 
 &fms_nml
