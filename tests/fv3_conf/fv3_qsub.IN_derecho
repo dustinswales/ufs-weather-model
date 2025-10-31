@@ -4,7 +4,7 @@
 #PBS -N @[JBNME]
 #PBS -A @[ACCNR]
 #PBS -q @[QUEUE]
-#PBS -l select=@[NODES]:ncpus=@[TPN]:ompthreads=@[THRD]
+#PBS -l select=@[NODES]:ncpus=@[TPN]:mpiprocs=@[TPN]:ompthreads=@[THRD]
 #PBS -l walltime=00:@[WLCLK]:00
 
 set -eux
@@ -42,7 +42,7 @@ if [ "${JOB_SHOULD_FAIL:-NO}" = WHEN_RUNNING ] ; then
     false
 fi
 
-mpiexec -n @[TASKS] --cpu-bind core -depth @[THRD] ./fv3.exe
+mpiexec -n @[UFS_TASKS] -ppn @[PPN] --hostfile $PBS_NODEFILE ./fv3.exe
 
 echo "Model ended:    " `date`
 echo -n " $( date +%s )," >> job_timestamp.txt
