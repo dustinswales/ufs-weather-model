@@ -101,7 +101,7 @@
   imfshalcnv   = @[IMFSHALCNV]
   imfdeepcnv   = @[IMFDEEPCNV]
   ras          = @[RAS]
-  cdmbgwd      = @[CDMBWD]
+  cdmbgwd      = @[CDMBGWD]
   prslrd0      = 0.
   ivegsrc      = 1
   isot         = 1
@@ -154,7 +154,6 @@
   rrtmgp_nBandsLW    = 16
   rrtmgp_nBandsSW    = 14
   rrtmgp_lw_phys_blksz = 16
-  doGP_cldoptics_LUT = @[DOGP_CLDOPTICS_LUT]
   doGP_lwscat        = @[DOGP_LWSCAT]
   progsigma    = @[PROGSIGMA]
 /
