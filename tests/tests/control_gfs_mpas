@@ -10,7 +10,8 @@ export CNTL_DIR=control_gfs_mpas
 
 export LIST_FILES="mpas_log.txt"
 
-export_mpas
+export_mpas_gfs
+
 export ATM_compute_tasks=12
 export FV3_RUN=gfs_mpas_run.IN
 export CCPP_SUITE=MPAS_RRFS

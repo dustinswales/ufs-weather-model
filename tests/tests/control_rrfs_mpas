@@ -10,7 +10,7 @@ export CNTL_DIR=control_rrfs_mpas
 
 export LIST_FILES=""
 
-export_mpas
+export_mpas_rrfs
 
 export ATM_compute_tasks=4
 export FV3_RUN=rrfs_mpas_run.IN

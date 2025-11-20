@@ -523,7 +523,6 @@ export_mpas ()
     export_gfs_physics
     # ufs.configure defaults
     export UFS_CONFIGURE=ufs.configure.atm.IN
-    export MODEL_CONFIGURE=mpasatm_configure.IN
     export atm_model=mpas
 
     export DIAG_TABLE=diag_table_rrfs_a
@@ -563,14 +562,14 @@ export_mpas ()
 
     export DAYS=1
     export ENS_NUM=1
-    export SYEAR=2016 #mpasatm_configure.IN
-    export SMONTH=10 #mpasatm_configure.IN
-    export SDAY=03 #mpasatm_configure.IN
-    export SHOUR=00 #mpasatm_configure.IN
-    export SECS=$(( SHOUR*3600 )) #mpasatm_configure.IN
-    export FHMAX=$(( DAYS*24 )) #mpasatm_configure.IN
+    export SYEAR=2016
+    export SMONTH=10
+    export SDAY=03
+    export SHOUR=00
+    export SECS=$(( SHOUR*3600 ))
+    export FHMAX=$(( DAYS*24 ))
     export FHCYC=0
-    export FHROT=0 #mpasatm_configure.IN
+    export FHROT=0
     export LDIAG3D=.false.
     export QDIAG3D=.false.
     export PRINT_DIFF_PGR=.false.
@@ -626,6 +625,17 @@ export_mpas ()
     export ZSTANDARD_LEVEL=0
 
     export DOMAINS_STACK_SIZE=3000000
+}
+export_mpas_rrfs ()
+{
+    export_mpas
+    MODEL_CONFIGURE=mpasrrfs_configure.IN
+}
+
+export_mpas_gfs ()
+{
+    export_mpas
+    MODEL_CONFIGURE=mpasgfs_configure.IN
 }
 
 export_gfs_physics ()
