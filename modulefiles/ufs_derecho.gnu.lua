@@ -18,10 +18,11 @@ load(pathJoin("cmake", cmake_ver))
 stack_python_ver=os.getenv("stack_python_ver") or "3.11.7"
 load(pathJoin("stack-python", stack_python_ver))
 
+load("ufs_common")
+
+nccmp_ver=os.getenv("nccmp_ver") or "1.9.0.1"
+load(pathJoin("nccmp", nccmp_ver))
+
 setenv("CMAKE_Platform", "derecho.gnu")
-load("ufs-weather-model-env")
-load("sp/2.5.0")
-load("crtm/2.4.0.1")
-load("scotch/7.0.4")
 
 whatis("Description: UFS build environment")
