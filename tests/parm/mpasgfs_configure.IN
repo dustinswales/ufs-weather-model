@@ -4,7 +4,7 @@ start_day:               28
 start_hour:              0
 start_minute:            0
 start_second:            0
-nhours_fcst:             @[FHMAX]
+nhours_fcst:             1
 fhrot:                   @[FHROT]
 
 dt_atmos:                @[DT_ATMOS]
