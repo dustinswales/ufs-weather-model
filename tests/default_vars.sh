@@ -531,12 +531,6 @@ export_mpas ()
     export UFS_CONFIGURE=ufs.configure.atm.IN
     export atm_model=mpas
 
-    export DIAG_TABLE=diag_table_rrfs_a
-    export FIELD_TABLE=field_table_regional_rrfs_a
-    export FV3_RUN=rrfs_mpas_run.IN
-    export INPUT_NML=control_mpas.nml.IN
-    export CCPP_SUITE=MPAS_RRFS
-
     #
     export MPAS=true
     export FV3=false
@@ -634,13 +628,32 @@ export_mpas ()
 }
 export_mpas_rrfs ()
 {
+    # RRFS agnostic MPAS settings
     export_mpas
+
+    # RRFS specific MPAS settings.
+    export DIAG_TABLE=diag_table_mpas
+    export FIELD_TABLE=field_table_rrfs_mpas
+    export FV3_RUN=rrfs_mpas_run.IN
+    export INPUT_NML=control_rrfs_mpas.nml.IN
+    export CCPP_SUITE=MPAS_RRFS
+
     MODEL_CONFIGURE=mpasrrfs_configure.IN
 }
 
 export_mpas_gfs ()
 {
+    # GFS agnostic MPAS settings.
     export_mpas
+
+    # GFS specific MPAS setting
+    export DIAG_TABLE=diag_table_mpas
+    export FIELD_TABLE=field_table_gfsv17_mpas
+    export FV3_RUN=gfs_mpas_run.IN
+    export INPUT_NML=control_gfs_mpas.nml.IN
+    # Use regional physics for now.
+    export CCPP_SUITE=MPAS_RRFS
+
     MODEL_CONFIGURE=mpasgfs_configure.IN
 }
 
