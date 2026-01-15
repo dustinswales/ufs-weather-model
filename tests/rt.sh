@@ -816,8 +816,9 @@ case ${MACHINE_ID} in
       dprefix="/scratch4/NAGAPE/epic/${USER}/stmp"
     fi
     DISKNM="/scratch4/NAGAPE/epic/role-epic/UFS-WM_RT"
-    STMP="${STMP:-${dprefix}/RT_BASELINE}"
-    PTMP="${PTMP:-${dprefix}/RT_RUNDIRS}"
+    dprefix_local=/scratch3/BMC/gmtb/Grant.Firl
+    STMP=$dprefix_local/stmp4
+    PTMP=$dprefix_local/stmp2
 
     SCHEDULER=slurm
 
