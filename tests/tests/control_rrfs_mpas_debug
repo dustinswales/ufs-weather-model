@@ -12,6 +12,7 @@ export LIST_FILES=""
 
 export_mpas_rrfs
 
+export FHMAX=1
 export ATM_compute_tasks=4
 export FV3_RUN=rrfs_mpas_run.IN
 export CCPP_SUITE=MPAS_RRFS
