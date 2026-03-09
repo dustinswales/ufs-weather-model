@@ -12,6 +12,9 @@ export LIST_FILES="mpas_log.txt"
 
 export_mpas_gfs
 
+export FHMAX=12
+export OUTPUT_FH="3 -1"
+
 export ATM_compute_tasks=12
 export FV3_RUN=gfs_mpas_run.IN
 export CCPP_SUITE=MPAS_RRFS
