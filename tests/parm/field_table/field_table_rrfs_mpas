@@ -42,7 +42,7 @@
            "longname",     "Cloud graupel number concentration"
            "units",        "/kg"
        "profile_type", "fixed", "surface_value=0.0" /
- "TRACER", "atmos_mod", "o3mr"
-           "longname",     "ozone mixing ratio"
-           "units",        "kg/kg"
-       "profile_type", "fixed", "surface_value=1.e30" /
+# "TRACER", "atmos_mod", "o3mr"
+#           "longname",     "ozone mixing ratio"
+#           "units",        "kg/kg"
+#       "profile_type", "fixed", "surface_value=1.e30" /

@@ -81,13 +81,14 @@
 #endif
 #ifdef FRONT_LM4
       use FRONT_LM4,        only: LM4_SS  => SetServices
-#endif      
+#endif
 #ifdef FRONT_NOAHMP
       use FRONT_NOAHMP,     only: NOAHMP_SS  => SetServices
 #endif
   ! - Handle build time FIR options:
 #ifdef FRONT_FIRE_BEHAVIOR
-      use FRONT_FIRE_BEHAVIOR, only: FIRE_BEHAVIOR_SS => SetServices
+      use FRONT_FIRE_BEHAVIOR, only: FIRE_BEHAVIOR_SS => SetServices, &
+                                     FIRE_BEHAVIOR_SV => SetVM
 #endif
 #ifdef FRONT_LIS
       use FRONT_LIS,        only: LIS_SS   => SetServices
@@ -477,7 +478,7 @@
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
           end if
-#endif 
+#endif
 #ifdef FRONT_NOAHMP
           if (trim(model) == "noahmp") then
             call NUOPC_DriverAddComp(driver, trim(prefix), NOAHMP_SS, &
@@ -489,6 +490,7 @@
 #ifdef FRONT_FIRE_BEHAVIOR
           if (trim(model) == "fire_behavior") then
             call NUOPC_DriverAddComp(driver, trim(prefix), FIRE_BEHAVIOR_SS, &
+              FIRE_BEHAVIOR_SV, info=info, &
               petList=petList, comp=comp, rc=rc)
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
@@ -811,7 +813,7 @@
 
        !TODO: this is hard-wired to CIME start/continue types in terms of gcomp
        IsRestart = .false.
-       if (trim(start_type) == trim(start_type_cont) .or. trim(start_type) == trim(start_type_brnch)) then
+       if (trim(start_type) == trim(start_type_cont)) then
           IsRestart = .true.
        end if
     else

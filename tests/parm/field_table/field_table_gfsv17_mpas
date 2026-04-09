@@ -22,6 +22,26 @@
            "longname",     "Graupel mixing ratio"
            "units",        "kg/kg"
        "profile_type", "fixed", "surface_value=1.e30" /
+ "TRACER", "atmos_mod", "nc"
+           "longname",     "Cloud droplet number concentration"
+           "units",        "/kg"
+       "profile_type", "fixed", "surface_value=0.0" /
+ "TRACER", "atmos_mod", "nr"
+           "longname",     "Cloud rain number concentration"
+           "units",        "/kg"
+       "profile_type", "fixed", "surface_value=0.0" /
+ "TRACER", "atmos_mod", "ni"
+           "longname",     "Cloud ice number concentration"
+           "units",        "/kg"
+       "profile_type", "fixed", "surface_value=0.0" /
+ "TRACER", "atmos_mod", "ns"
+           "longname",     "Cloud snow number concentration"
+           "units",        "/kg"
+       "profile_type", "fixed", "surface_value=0.0" /
+ "TRACER", "atmos_mod", "ng"
+           "longname",     "Cloud graupel number concentration"
+           "units",        "/kg"
+       "profile_type", "fixed", "surface_value=0.0" /
  "TRACER", "atmos_mod", "o3mr"
            "longname",     "ozone mixing ratio"
            "units",        "kg/kg"

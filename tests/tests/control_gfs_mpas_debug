@@ -8,9 +8,15 @@ export TEST_DESCR="Build UWM with MPAS dynamical core for GFS application"
 
 export CNTL_DIR=control_gfs_mpas_debug
 
-export LIST_FILES="mpas_log.txt"
+export LIST_FILES="history.2023-03-28_00:00:00.nc \
+      	      	   history.2023-03-28_01:00:00.nc \
+		   history.2023-03-28_02:00:00.nc \
+		   history.2023-03-28_03:00:00.nc"
 
 export_mpas_gfs
+
+export FHMAX=3
+export OUTPUT_FH="1 -1"
 
 export ATM_compute_tasks=12
 export FV3_RUN=gfs_mpas_run.IN
