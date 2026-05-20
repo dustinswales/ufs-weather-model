@@ -551,6 +551,32 @@ export_mpas ()
 
     export DOMAINS_STACK_SIZE=3000000
 }
+
+export_mpas_stochy ()
+{
+    export MPAS_DO_SPPT=.false.
+    export MPAS_DO_SKEB=.false
+    export MPAS_SPPTINT=0
+    export MPAS_SPPT_1=0.0
+    export MPAS_SPPT_2=0.0
+    export MPAS_SPPT_3=0.0
+    export MPAS_SPPT_TAU_1=21600.
+    export MPAS_SPPT_TAU_2=86400.
+    export MPAS_SPPT_TAU_3=21600.
+    export MPAS_SPPT_LSCALE_1=500000.
+    export MPAS_SPPT_LSCALE_2=1000000.
+    export MPAS_SPPT_LSCALE_3=2000000.
+    export MPAS_SPPT_LOGIT=.true.
+    export MPAS_SPPT_SFCLIMIT=.true.
+    export MPAS_ISEED_SPPT1='2026010112001'
+    export MPAS_ISEED_SPPT2='0'
+    export MPAS_ISEED_SPPT3='0'
+    export MPAS_SPPT_HGT_TOP2=15000
+    export MPAS_SPPT_HGT_TOP1=27000
+    export MPAS_STOCHINI=.false.
+
+}
+
 export_mpas_rrfs ()
 {
     # RRFS agnostic MPAS settings
@@ -562,6 +588,9 @@ export_mpas_rrfs ()
     export FV3_RUN=rrfs_mpas_run.IN
     export INPUT_NML=control_rrfs_mpas.nml.IN
     export CCPP_SUITE=MPAS_RRFS
+
+    # Stochastic physics
+    export_mpas_stochy
 
     MODEL_CONFIGURE=mpasrrfs_configure.IN
 }
@@ -578,6 +607,9 @@ export_mpas_gfs ()
     export INPUT_NML=control_gfs_mpas.nml.IN
     # Use regional physics for now.
     export CCPP_SUITE=MPAS_RRFS
+
+    # Stochastic physics
+    export_mpas_stochy
 
     MODEL_CONFIGURE=mpasgfs_configure.IN
 }
