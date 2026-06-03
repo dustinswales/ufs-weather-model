@@ -12,8 +12,8 @@
   path = stochastic_physics
   #url = https://github.com/NOAA-PSL/stochastic_physics
   #branch = master
-  url = https://github.com/dustinswales/stochastic_physics
-  branch = fixes_for_uwm
+  url = https://github.com/dtcenter/stochastic_physics
+  branch = gsl/MPAS_stoch_physics_try_merge_stoch_master
 [submodule "CMakeModules"]
   path = CMakeModules
   url = https://github.com/NOAA-EMC/CMakeModules
