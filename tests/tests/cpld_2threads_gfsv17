@@ -1,23 +1,12 @@
 #
-#  cpld_control CICE C-grid P8 test
+#  cpld_control GFSv17 threading test
 #
-export TEST_DESCR="Fully coupled FV3-CCPP-MOM6-CICE-CMEPS-WW3 system - C96MX100 - CICE6 Cgrid"
 
-export CNTL_DIR=cpld_control_ciceC_p8
+source ${PATHRT}/tests/cpld_control_gfsv17
 
-export LIST_FILES="sfcf021.tile1.nc \
-                   sfcf021.tile2.nc \
-                   sfcf021.tile3.nc \
-                   sfcf021.tile4.nc \
-                   sfcf021.tile5.nc \
-                   sfcf021.tile6.nc \
-                   atmf021.tile1.nc \
-                   atmf021.tile2.nc \
-                   atmf021.tile3.nc \
-                   atmf021.tile4.nc \
-                   atmf021.tile5.nc \
-                   atmf021.tile6.nc \
-                   sfcf024.tile1.nc \
+export TEST_DESCR="Fully coupled FV3-CCPP-MOM6-CICE-CMEPS-WW3 system - C96MX100 - unst WW3 - 2 threads"
+
+export LIST_FILES="sfcf024.tile1.nc \
                    sfcf024.tile2.nc \
                    sfcf024.tile3.nc \
                    sfcf024.tile4.nc \
@@ -67,31 +56,30 @@ export LIST_FILES="sfcf021.tile1.nc \
                    ufs.cpld.ww3.r.2021-03-23-21600.nc \
                    20210323.060000.out_pnt.ww3.nc \
                    20210323.060000.out_grd.ww3 "
-export DT_ATMOS=720
-export_fv3
-export_ugwpv1
-export_cpl
-export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
 
-export RESTART_N=12
-export RESTART_INTERVAL="${RESTART_N} -1"
-export OUTPUT_FH='0 21 24'
+export INPES=$INPES_cpl_thrd
+export JNPES=$JNPES_cpl_thrd
+export WRTTASK_PER_GROUP=$(( WPG_cpl_thrd * THRD_cpl_thrd ))
 
-export MOM6_TOPOEDITS=ufs.topo_edits_011818.nc
-export MOM6_ALLOW_LANDMASK_CHANGES=True
-export eps_imesh=2.5e-1
+export OCN_tasks=${OCN_tasks_cpl_thrd}
+export ICE_tasks=${ICE_tasks_cpl_thrd}
+export WAV_tasks=${WAV_tasks_cpl_thrd}
 
-export CICE_GRIDICE=C
+export atm_omp_num_threads=$THRD_cpl_thrd
+export chm_omp_num_threads=$atm_omp_num_threads
+export med_omp_num_threads=$atm_omp_num_threads
+export ocn_omp_num_threads=$OCN_thrds_cpl_thrd
+export ice_omp_num_threads=$ICE_thrds_cpl_thrd
+export wav_omp_num_threads=$WAV_thrds_cpl_thrd
 
-export FV3_RUN=cpld_control_run.IN
+export CICE_NPROC=${ICE_tasks}
+export np2=`expr $CICE_NPROC / 2`
+export CICE_BLCKX=`expr $NX_GLB / $np2`
+export CICE_BLCKY=`expr $NY_GLB / 2`
 
-export K_SPLIT=4
-export N_SPLIT=5
+export ESMF_THREADING=false
+export THRD=$THRD_cpl_thrd
 
-# HR4 GFSv17 GWD update
-export DO_GWD_OPT_PSL=.true.
-export DO_GSL_DRAG_SS=.false.
-
-if [[ $MACHINE_ID = gaeac6 ]]; then
-  TPN=96
+if [[ ${MACHINE_ID} = orion || ${MACHINE_ID} = wcoss2 ]]; then
+  export WLCLK=40
 fi
