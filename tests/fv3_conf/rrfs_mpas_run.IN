@@ -49,6 +49,7 @@ if [ $IMP_PHYSICS = 8 ]; then
   cp    @[INPUTDATA_ROOT]/FV3_fix/qr_acr_qgV2.dat .
   cp    @[INPUTDATA_ROOT]/FV3_fix/freezeH2O.dat .
   cp    @[INPUTDATA_ROOT]/FV3_fix/CCN_ACTIVATE.BIN .
+  cp  	/scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/physics/thompson/* .
 fi
 
 #TEMPO
