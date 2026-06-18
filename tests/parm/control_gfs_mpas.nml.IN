@@ -1,6 +1,6 @@
 &atmos_model_nml
   blocksize = 32
-  dycore_only = .false.
+  dycore_only = @[DYCORE_ONLY]
   ccpp_suite = '@[CCPP_SUITE]'
   ic_filename = '@[IC_FILENAME]'
   stream_list_history = '@[STREAM_LIST_HISTORY]'
