@@ -1,6 +1,6 @@
 [submodule "UFSATM"]
   path = UFSATM
-  url = https://github.com/dustinswales/fv3atm
+  url = https://github.com/grantfirl/ufsatm
   branch = feature/phys2dyn_radmp
 [submodule "WW3"]
   path = WW3
