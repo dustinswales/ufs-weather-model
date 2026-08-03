@@ -63,6 +63,7 @@ if [ $IMP_PHYSICS = 88 ]; then
   cp @[INPUTDATA_ROOT]/FV3_input_data_TEMPO/MP_TEMPO_QRacrQG.dat .
   cp @[INPUTDATA_ROOT]/FV3_input_data_TEMPO/MP_TEMPO_HAILAWARE_QRacrQG.dat .
   cp @[INPUTDATA_ROOT]/FV3_input_data_TEMPO/MP_TEMPO_QRacrQS.dat .
+  cp /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/physics/tempo/* .
 fi
 
 #prognostic aerosols

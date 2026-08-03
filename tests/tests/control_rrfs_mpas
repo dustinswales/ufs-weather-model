@@ -12,13 +12,15 @@ export LIST_FILES=""
 
 export_mpas_rrfs
 
-export FHMAX=24
-export OUTPUT_FH="0 1 3 12 18 24"
+export FHMAX=12
+export OUTPUT_FH="3 -1"
+export RESTART_FH="6 -1"
 
-export ATM_compute_tasks=4
+export ATM_compute_tasks=12
 export FV3_RUN=rrfs_mpas_run.IN
 export CCPP_SUITE=MPAS_RRFS
 export INPUT_NML=control_rrfs_mpas.nml.IN
-export IC_FILENAME=x1.40962.init.nc
-export LBC_FILENAME=x1.40962.lbc.nc
-export GRID_FILENAME=conus.120km.graph.info.part.
+export IC_FILENAME=mpas.gsl.gsl.global.120km.gfs.init.2023-03-10_15.00.00.nc
+export GRID_FILENAME=x1.40962.graph.info.part.
+export STREAM_LIST_HISTORY=stream_list.atmosphere.output
+export STREAM_LIST_RESTART=stream_list.atmosphere.restart
