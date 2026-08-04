@@ -41,17 +41,18 @@ fi
 echo
 ###############################################################
 # initialize module
+# shellcheck disable=SC1091
 . "${LMOD_ROOT}"/lmod/init/bash
 
 # update path with current directory
 export PATH=.:${PATH}
 
 # if grads-to-control app is not present, get it from web:
-[[ -f g2ctl ]] || wget -q https://ftp.cpc.ncep.noaa.gov/wd51we/g2ctl/g2ctl
+[[ -f g2ctl ]] || wget -q https://raw.githubusercontent.com/NOAA-EPIC/Aquaplanet/refs/heads/main/utils/g2ctl
 chmod 755 g2ctl
 
 # if color bar script is not present, get it from web:
-[[ -f cbar.gs ]] || wget -q http://cola.gmu.edu/grads/scripts/cbar.gs
+[[ -f cbar.gs ]] || wget -q https://raw.githubusercontent.com/NOAA-EPIC/Aquaplanet/refs/heads/main/utils/cbar.gs
 
 # load modules grads and wgrib2
 HOSTNAME=$(hostname)
@@ -68,8 +69,6 @@ case $(hostname -f) in
   gaea6*)       HSD_path=/gpfs/f6/bil-fire8/world-shared/HSD_INPUT_DATA   ;; ## gaea6
   hfe*)         HSD_path=/scratch1/NCEPDEV/nems/role.epic/HSD_INPUT_DATA  ;; ## hera
   hecflow*)     HSD_path=/scratch1/NCEPDEV/nems/role.epic/HSD_INPUT_DATA  ;; ## hera
-  fe*)          HSD_path=/mnt/lfs5/HFIP/hfv3gfs/role.epic/HSD_INPUT_DATA  ;; ## jet
-  tfe*)         HSD_path=/mnt/lfs5/HFIP/hfv3gfs/role.epic/HSD_INPUT_DATA  ;; ## tjet
   [Oo]rion*)    HSD_path=/work/noaa/epic/role-epic/contrib/HSD_INPUT_DATA ;; ## orion
   [Hh]ercules*) HSD_path=/work/noaa/epic/role-epic/contrib/HSD_INPUT_DATA ;; ## hercules
   derecho*)     HSD_path=/glade/work/epicufsrt/contrib/HSD_INPUT_DATA     ;; ## derecho

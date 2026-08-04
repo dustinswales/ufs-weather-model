@@ -24,7 +24,7 @@ module shr_is_restart_fh_mod
 contains
 
   !-----------------------------------------------------------------------
-  subroutine init_is_restart_fh(currentTime, dtime, lLog, restartfh_info)
+  subroutine init_is_restart_fh(currentTime, dtime, lLog, restartfh_info, key)
     !
     ! !DESCRIPTION:
     ! Process restart_fh attribute from model_configure in UFS
@@ -36,30 +36,54 @@ contains
     integer, intent(in)         :: dtime ! time step (s)
     logical, intent(in)         :: lLog ! If true, this task logs restart_fh info
     type(is_restart_fh_type), intent(out) :: restartfh_info !restart_fh info for each task
+    character(len=*),intent(in),optional :: key
     !
     ! !LOCAL VARIABLES:
     character(len=256)           :: timestr
-    integer                      :: n, nfh, fh_s, rc
+    integer                      :: n, nfh, fh_s, rc, nhours_fcst, ntimeout, fhi, ifh
     logical                      :: isPresent
     real(kind=ESMF_KIND_R8), allocatable :: restart_fh(:)
     type(ESMF_TimeInterval)      :: fhInterval
     type(ESMF_Config)            :: CF_mc
+    character(len=64)            :: key_name
     !-----------------------------------------------------------------------
 
+    ! Default is to create restart times, but other "keys" could use this routine.
+    if (present(key)) then
+       key_name = trim(key)//':'
+    else
+       key_name = 'restart_fh:'
+    endif
+    
     ! set up Times to write non-interval restarts
     inquire(FILE='model_configure', EXIST=isPresent)
     if (isPresent) then !model_configure exists. this is ufs run
       CF_mc = ESMF_ConfigCreate(rc=rc)
       call ESMF_ConfigLoadFile(config=CF_mc,filename='model_configure' ,rc=rc)
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
+      nfh = ESMF_ConfigGetLen(config=CF_mc, label=trim(key_name),rc=rc)
 
-      nfh = ESMF_ConfigGetLen(config=CF_mc, label ='restart_fh:',rc=rc)
       if (nfh .gt. 0) then
         allocate(restart_fh(1:nfh))
         allocate(restartfh_info%restartFhTimes(1:nfh)) !not deallocated here
-
-        call ESMF_ConfigGetAttribute(CF_mc,valueList=restart_fh,label='restart_fh:', rc=rc)
+        call ESMF_ConfigGetAttribute(CF_mc,valueList=restart_fh,label=trim(key_name), rc=rc)
         if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
+
+        ! Support case where restart_fh: "fh_interval -1"
+        if (nfh == 2 .and. int(restart_fh(2)) == -1) then
+           call ESMF_ConfigGetAttribute(CF_mc,value=nhours_fcst,label='nhours_fcst:', rc=rc)
+           fhi = int(restart_fh(1))
+           ntimeout = nhours_fcst/fhi
+           nfh = ntimeout
+           deallocate(restart_fh)
+           deallocate(restartfh_info%restartFhTimes)
+           allocate(restart_fh(1:nfh))
+           allocate(restartfh_info%restartFhTimes(1:nfh))
+           do ifh = 1,nfh
+              restart_fh(ifh) = ifh*fhi
+           end do
+        endif
+        
         ! create a list of times at each restart_fh
         do n = 1,nfh
           fh_s = NINT(3600*restart_fh(n))
@@ -122,49 +146,81 @@ contains
   !!
   !> @details Write a log file for a named component when a restart file is written
   !!
-  !! @param[in]   nextTime      the ESMF time at the end of a ModelAdvance
-  !! @param[in]   startTime     the ESMF time at the Model Start
-  !! @param[in]   complog       the named component
+  !! @param[in]   nextTime       the ESMF time at the end of a ModelAdvance
+  !! @param[in]   startTime      the ESMF time at the Model Start
+  !! @param[in]   complog        the named component
+  !! @param[in]   prefixtime     optional, if true log filename has time prefix
+  !! @param[in]   lastrestart    optional, if present, write the time of the last restart
+  !! @param[in]   lastoutput     optional, if present, write the filename written at this FH
   !! @param[out]  rc return code
   !!
   !> @authorDenise.Worthen@noaa.gov
   !> @date 04-14-2025
-  subroutine log_restart_fh(nextTime, startTime, complog, rc)
+  subroutine log_restart_fh(myTime, startTime, complog, prefixtime, lastrestart, lastoutput, rc)
 
     use ESMF,              only : ESMF_SUCCESS, ESMF_MAXSTR, ESMF_Time, ESMF_TimeInterval
     use ESMF,              only : ESMF_TimeGet, ESMF_TimeIntervalGet
     use ESMF,              only : operator(==), operator(-)
 
-    type(ESMF_Time),  intent(in) :: nextTime, startTime
-    character(len=*), intent(in) :: complog
-    integer,         intent(out) :: rc
+    type(ESMF_Time),  intent(in)           :: myTime, startTime
+    character(len=*), intent(in)           :: complog
+    logical,          intent(in), optional :: prefixtime
+    type(ESMF_Time),  intent(in), optional :: lastrestart
+    character(len=*), intent(in), optional :: lastoutput
+    integer,         intent(out)           :: rc
 
     ! local variables
     type(ESMF_TimeInterval)     :: elapsedTime
     real(ESMF_KIND_R8)          :: fhour
     character(ESMF_MAXSTR)      :: filename
     character(ESMF_MAXSTR)      :: nexttimestring
+    character(ESMF_MAXSTR)      :: timestring
     integer                     :: fh_logunit
     integer                     :: yr,mon,day,hour,minute,sec ! time units
+    logical                     :: lprefix
+    character(ESMF_MAXSTR)      :: lastout
     character(len=*), parameter :: subname='(log_restart_fh)'
     !-----------------------------------------------------------------------
 
     call ESMF_LogWrite(trim(subname)//": called", ESMF_LOGMSG_INFO)
     rc = ESMF_SUCCESS
 
-    elapsedTime = nextTime - startTime
+    lprefix = .false.
+    if (present(prefixtime)) then
+       lprefix = prefixtime
+    end if
+    lastout = ''
+    if (present(lastoutput)) then
+       lastout = trim(lastoutput)
+    end if
+
+    elapsedTime = myTime - startTime
     call ESMF_TimeIntervalGet(elapsedTime, h_r8=fhour,rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
-
-    call ESMF_TimeGet(nexttime, yy=yr, mm=mon, dd=day, h=hour, m=minute, s=sec, rc=rc)
+    call ESMF_TimeGet(myTime, yy=yr, mm=mon, dd=day, h=hour, m=minute, s=sec, rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
     write(nexttimestring,'(6i8)')yr,mon,day,hour,minute,sec
+    if (lprefix) then
+       write(filename,'(i4.4,2(i2.2),A,3(i2.2),A)') yr, mon, day,'.', hour, minute, sec,'.'//trim(complog)
+    else
+       write(filename,'(a,i4.4)')'log.'//trim(complog)//'.f',int(fhour)
+    end if
+    if (present(lastrestart)) then
+       call ESMF_TimeGet(lastrestart, yy=yr, mm=mon, dd=day, h=hour, m=minute, s=sec, rc=rc)
+       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
+       write(timestring,'(6i8)')yr,mon,day,hour,minute,sec
+    end if
 
-    write(filename,'(a,i4.4)')'log.'//trim(complog)//'.f',int(fhour)
     open(newunit=fh_logunit,file=trim(filename))
     write(fh_logunit,'(a)')'completed: '//trim(complog)
     write(fh_logunit,'(a,f10.3)')'forecast hour:',fhour
     write(fh_logunit,'(a)')'valid time: '//trim(nexttimestring)
+    if (len_trim(lastout) > 0) then
+       write(fh_logunit,'(a)')'last output: '//trim(lastout)
+    end if
+    if (present(lastrestart)) then
+       write(fh_logunit,'(a)')'last restart: '//trim(timestring)
+    end if
     close(fh_logunit)
 
   end subroutine log_restart_fh

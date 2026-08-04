@@ -1,0 +1,43 @@
+###############################################################################
+#
+#  global control test: GFSv16 atmosphere only at C96L127 using cloud overlap option iovr=4 with GFDLMP Version 3.0
+#
+###############################################################################
+
+TEST_DESCR="Compare global control using iovr=4 results with previous trunk version"
+
+CNTL_DIR=control_iovr4_gfdlmpv3
+
+LIST_FILES="sfcf000.nc \
+            sfcf021.nc \
+            sfcf024.nc \
+            atmf000.nc \
+            atmf021.nc \
+            atmf024.nc \
+            GFSFLX.GrbF00 \
+            GFSFLX.GrbF21 \
+            GFSFLX.GrbF24 \
+            GFSPRS.GrbF00 \
+            GFSPRS.GrbF21 \
+            GFSPRS.GrbF24"
+
+export_fv3_v16
+NPZ=127
+NPZP=128
+DT_ATMOS=720
+SYEAR=2021
+SMONTH=03
+SDAY=22
+SHOUR=06
+RESTART_INTERVAL="12 -1"
+OUTPUT_GRID='gaussian_grid'
+NSTF_NAME='2,0,0,0,0'
+WRITE_DOPOST=.true.
+IAER=1011
+USE_MERRA2=.true.
+OUTPUT_FH='0 21 24'
+IOVR=4
+
+FV3_RUN=control_run.IN
+CCPP_SUITE=FV3_GFS_v16_gfdlmpv3
+INPUT_NML=control_gfdlmpv3.nml.IN

@@ -44,18 +44,24 @@ function post_test() {
 	git config user.email "ecc.platform@noaa.gov"
 	git config user.name "epic-cicd-jenkins"
 
-	git add tests/logs/RegressionTests_${machine,,}.log
+	git add "tests/logs/RegressionTests_${machine,,}.log"
 	git status
-	git commit -m "[AutoRT] ${machine} Job Completed.\n\n\n on-behalf-of @ufs-community <ecc.platform@noaa.gov>"
+        
+        ##Check regression test logs results 
+        if grep -q "Result: SUCCESS" "${UFS_MODEL_DIR}/tests/logs/RegressionTests_${machine,,}.log" && grep -q "status=0" "${UFS_MODEL_DIR}/${machine,,}-status"; then
+           git commit -m "[AutoRT] ${machine} Job Completed Successfully.\n\n\n on-behalf-of @ufs-community <ecc.platform@noaa.gov>"
+        else
+           git commit --allow-empty -m "[AutoRT] ${machine} Job Failed! \n\n\n on-behalf-of @ufs-community <ecc.platform@noaa.gov>"
+        fi
 
 	SSH_ORIGIN=$(curl --silent "https://api.github.com/repos/ufs-community/ufs-weather-model/pulls/${CHANGE_ID}" | jq -r '.head.repo.ssh_url')
 	git remote -v | grep -w sshorigin > /dev/null 2>&1 && git remote remove sshorigin > /dev/null 2>&1
-	git remote add sshorigin ${SSH_ORIGIN} > /dev/null 2>&1 || return 0
+	git remote add sshorigin "${SSH_ORIGIN}" > /dev/null 2>&1 || return 0
 
 	FORK_BRANCH=$(curl --silent "https://api.github.com/repos/ufs-community/ufs-weather-model/pulls/${CHANGE_ID}" | jq -r '.head.ref')
-	git pull sshorigin ${FORK_BRANCH} || return 0
+	git pull sshorigin "${FORK_BRANCH}" || return 0
 	git status
-	git push sshorigin HEAD:${FORK_BRANCH} || return 0
+	git push sshorigin HEAD:"${FORK_BRANCH}" || return 0
 }
 
 pwd

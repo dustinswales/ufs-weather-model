@@ -23,13 +23,13 @@
 !          UFS Driver component
 !              /|\
 !             / | \
-!          ATM/OCN/ICE/WAV/LND/IPM/HYD/FIR .. components
+!          UFSATM/OCN/ICE/WAV/LND/IPM/HYD/FIR .. components
 !          |    |   |
 !          |    |   (CICE, etc.)
 !          |    |
-!          |    (MOM6, HYCOM, etc.)
+!          |    (MOM6, etc.)
 !          |
-!          (FV3, etc.)
+!          (FV3, MPAS, etc.)
 !
 !-----------------------------------------------------------------------
 !
@@ -45,16 +45,13 @@
       use NUOPC_Model, only: SetVM
 
   ! - Handle build time ATM options:
-#ifdef FRONT_FV3
-      use FRONT_FV3,        only: FV3_SS   => SetServices
+#ifdef FRONT_UFSATM
+      use FRONT_UFSATM,     only: UFSATM_SS => SetServices
 #endif
 #ifdef FRONT_CDEPS_DATM
       use FRONT_CDEPS_DATM, only: DATM_SS  => SetServices
 #endif
   ! - Handle build time OCN options:
-#ifdef FRONT_HYCOM
-      use FRONT_HYCOM,      only: HYCOM_SS  => SetServices
-#endif
 #ifdef FRONT_MOM6
       use FRONT_MOM6,       only: MOM6_SS   => SetServices, &
                                   MOM6_SV   => SetVM
@@ -81,13 +78,14 @@
 #endif
 #ifdef FRONT_LM4
       use FRONT_LM4,        only: LM4_SS  => SetServices
-#endif      
+#endif
 #ifdef FRONT_NOAHMP
       use FRONT_NOAHMP,     only: NOAHMP_SS  => SetServices
 #endif
   ! - Handle build time FIR options:
 #ifdef FRONT_FIRE_BEHAVIOR
-      use FRONT_FIRE_BEHAVIOR, only: FIRE_BEHAVIOR_SS => SetServices
+      use FRONT_FIRE_BEHAVIOR, only: FIRE_BEHAVIOR_SS => SetServices, &
+                                     FIRE_BEHAVIOR_SV => SetVM
 #endif
 #ifdef FRONT_LIS
       use FRONT_LIS,        only: LIS_SS   => SetServices
@@ -99,6 +97,11 @@
   ! - Handle build time AQM options:
 #ifdef FRONT_AQM
       use FRONT_AQM,        only: AQM_SS  => SetServices
+#endif
+  ! - Handle build time CATChem options:
+#ifdef FRONT_CATCHEM
+      use FRONT_CATCHEM,    only: CATCHEM_SS  => SetServices, &
+                                  CATCHEM_SV  => SetVM
 #endif
   ! - Handle build time GOCART options:
 #ifdef FRONT_GOCART
@@ -362,9 +365,9 @@
           endif
 
           found_comp = .false.
-#ifdef FRONT_FV3
-          if (trim(model) == "fv3") then
-            call NUOPC_DriverAddComp(driver, trim(prefix), FV3_SS, &
+#ifdef FRONT_UFSATM
+          if (trim(model) == "mpas" .or. trim(model) == "fv3") then
+            call NUOPC_DriverAddComp(driver, trim(prefix), UFSATM_SS, &
               info=info, petList=petList, comp=comp, rc=rc)
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
@@ -383,14 +386,6 @@
             endif
             call NUOPC_DriverAddComp(driver, trim(prefix), DATM_SS, &
               petList=petList, comp=comp, rc=rc)
-            if (ChkErr(rc,__LINE__,u_FILE_u)) return
-            found_comp = .true.
-          end if
-#endif
-#ifdef FRONT_HYCOM
-          if (trim(model) == "hycom") then
-            call NUOPC_DriverAddComp(driver, trim(prefix), HYCOM_SS, &
-              SetVM, info=info, petList=petList, comp=comp, rc=rc)
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
           end if
@@ -477,7 +472,7 @@
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
           end if
-#endif 
+#endif
 #ifdef FRONT_NOAHMP
           if (trim(model) == "noahmp") then
             call NUOPC_DriverAddComp(driver, trim(prefix), NOAHMP_SS, &
@@ -489,6 +484,7 @@
 #ifdef FRONT_FIRE_BEHAVIOR
           if (trim(model) == "fire_behavior") then
             call NUOPC_DriverAddComp(driver, trim(prefix), FIRE_BEHAVIOR_SS, &
+              FIRE_BEHAVIOR_SV, info=info, &
               petList=petList, comp=comp, rc=rc)
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
@@ -541,6 +537,14 @@
             endif
             call NUOPC_DriverAddComp(driver, trim(prefix), AQM_SS, &
               petList=petList, comp=comp, rc=rc)
+            if (ChkErr(rc,__LINE__,u_FILE_u)) return
+            found_comp = .true.
+          end if
+#endif
+#ifdef FRONT_CATCHEM
+          if (trim(model) == "catchem") then
+            call NUOPC_DriverAddComp(driver, trim(prefix), CATCHEM_SS, &
+              CATCHEM_SV, info=info, petList=petList, comp=comp, rc=rc)
             if (ChkErr(rc,__LINE__,u_FILE_u)) return
             found_comp = .true.
           end if
@@ -811,7 +815,7 @@
 
        !TODO: this is hard-wired to CIME start/continue types in terms of gcomp
        IsRestart = .false.
-       if (trim(start_type) == trim(start_type_cont) .or. trim(start_type) == trim(start_type_brnch)) then
+       if (trim(start_type) == trim(start_type_cont)) then
           IsRestart = .true.
        end if
     else

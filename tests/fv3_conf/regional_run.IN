@@ -34,5 +34,11 @@ if [[ $POSTAPP = 'lam' ]]; then
     cp ${PATHRT}/parm/post_itag_fv3lam itag
     cp ${PATHRT}/parm/postxconfig-NT-fv3lam.txt postxconfig-NT.txt
     cp ${PATHRT}/parm/postxconfig-NT-fv3lam.txt postxconfig-NT_FH00.txt
-    cp ${PATHRT}/../FV3/upp/parm/params_grib2_tbl_new params_grib2_tbl_new
+    cp ${PATHRT}/../UFSATM/upp/parm/params_grib2_tbl_new params_grib2_tbl_new
+fi
+
+#TEMPO
+if [ $IMP_PHYSICS = 88 ]; then
+  cp @[INPUTDATA_ROOT]/FV3_input_data_TEMPO/* .
+  cp @[INPUTDATA_ROOT]/FV3_fix/ccn_activate.bin .
 fi

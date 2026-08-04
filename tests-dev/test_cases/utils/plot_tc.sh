@@ -9,13 +9,14 @@ step=3
   lon2=200
 ###############################################################
 # initialize module
+# shellcheck disable=SC1091
 . "${LMOD_ROOT}"/lmod/init/bash
 
 # update path with current directory
 export PATH=.:${PATH}
 
 # if grads to control app is not present, get it from web
-[[ -f g2ctl ]] || wget -q https://ftp.cpc.ncep.noaa.gov/wd51we/g2ctl/g2ctl
+[[ -f g2ctl ]] || wget -q https://raw.githubusercontent.com/NOAA-EPIC/Aquaplanet/refs/heads/main/utils/g2ctl
 chmod 755 g2ctl
 
 # load modules grads and wgrib2

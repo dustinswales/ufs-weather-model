@@ -28,7 +28,7 @@
     ntiles = 6
     npz = @[NPZ]
     dz_min = @[DZ_MIN]
-    ncnst  = 12
+    ncnst  = 13
     psm_bc = @[PSM_BC]
     grid_type = -1
     make_nh = @[MAKE_NH]
@@ -90,6 +90,7 @@
     no_dycore = .false.
     z_tracer = @[Z_TRACER]
     inline_q = @[INLINE_Q]
+    var_grav = .false.
     agrid_vel_rst = .false.
     read_increment = @[READ_INCREMENT]
     res_latlon_dynamics = "fv3_increment.nc"
@@ -107,8 +108,8 @@
 &gfs_physics_nml
     fhzero       = @[FHZERO]
     h2o_phys     = .true.
-    ldiag3d      = .true. 
-    qdiag3d      = .true.
+    ldiag3d      = .false. 
+    qdiag3d      = .false.
     print_diff_pgr= .false.
     fhcyc        = @[FHCYC]
     use_ufo      = .true.
@@ -174,12 +175,12 @@
     imfshalcnv   = @[IMFSHALCNV]
     imfdeepcnv   = @[IMFDEEPCNV]
     ras          = @[RAS]
-    cdmbgwd      = @[CDMBWD]
+    cdmbgwd      = @[CDMBGWD]
     prslrd0      = 0.
     ivegsrc      = 1
     isot         = 1
     lsoil        = 4
-    lsm          = 2
+    lsm          = @[LSM]
     iopt_dveg    = 4
     iopt_crs     = 2
     iopt_btr     = 1
@@ -214,7 +215,6 @@
     rrtmgp_nGptsLW     = 128
     rrtmgp_nBandsLW    = 16
     rrtmgp_nBandsSW    = 14
-    doGP_cldoptics_LUT = @[DOGP_CLDOPTICS_LUT]
     doGP_lwscat        = @[DOGP_LWSCAT]
     do_sppt      = @[DO_SPPT]
     do_shum      = @[DO_SHUM]

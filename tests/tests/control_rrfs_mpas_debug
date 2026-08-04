@@ -1,0 +1,24 @@
+###############################################################################
+#
+# RRFS test with MPAS dynamical core in DEBUG mode
+#
+###############################################################################
+
+TEST_DESCR="Build UWM with MPAS dynamical core for RRFS application"
+
+CNTL_DIR=control_rrfs_mpas_debug
+
+LIST_FILES=""
+
+export_mpas_rrfs
+
+FHMAX=4
+OUTPUT_FH="1 -1"
+
+ATM_compute_tasks=4
+FV3_RUN=rrfs_mpas_run.IN
+CCPP_SUITE=MPAS_RRFS
+INPUT_NML=control_rrfs_mpas.nml.IN
+IC_FILENAME=x1.40962.init.nc
+LBC_FILENAME=x1.40962.lbc.nc
+GRID_FILENAME=conus.120km.graph.info.part.

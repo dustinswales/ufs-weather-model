@@ -3,6 +3,7 @@
        chksum_debug = .false.
        dycore_only = .false.
        avg_max_length = 3600.
+       cpl_imp_mrg = @[CPL_IMP_MRG]
        ccpp_suite = '@[CCPP_SUITE]'
 /
 
@@ -195,7 +196,7 @@
        cnvcld         = .true.
        imfshalcnv     = @[IMFSHALCNV]
        imfdeepcnv     = @[IMFDEEPCNV]
-       cdmbgwd        = @[CDMBWD]
+       cdmbgwd        = @[CDMBGWD]
        sfc_z0_type    = 6
        prslrd0        = 0.
        ivegsrc        = 1
@@ -225,7 +226,6 @@
        cplocn2atm     = @[CPLOCN2ATM]
        cplwav         = @[CPLWAV]
        cplwav2atm     = @[CPLWAV2ATM]
-       cpl_imp_mrg    = @[CPL_IMP_MRG]
        psautco        = 0.0008, 0.0005
        prautco        = 0.00015, 0.00015
        iau_delthrs    = 6

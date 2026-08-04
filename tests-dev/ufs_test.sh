@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eux
 
+# shellcheck source-path=${GITHUB_WORKSPACE}/tests/
+
 SECONDS=0
 
 hostname
@@ -168,12 +170,15 @@ while getopts ":a:b:cl:mn:dwkreohs" opt; do
   esac
 done
 
+# shellcheck source=/github/workspace/tests/detect_machine.sh
 source detect_machine.sh # Note: this does not set ACCNR. The "if" block below does.
+# shellcheck source=/github/workspace/tests/rt_utils.sh
 source rt_utils.sh
+# shellcheck source=/github/workspace/tests/module-setup.sh
 source module-setup.sh
 
 check_machine=false
-platforms=( hera ursa orion hercules gaeac6 derecho noaacloud s4 )
+platforms=( hera ursa orion hercules gaeac6 derecho noaacloud )
 for name in "${platforms[@]}"
 do
   if [[ ${MACHINE_ID} == "${name}" ]]; then
@@ -183,6 +188,7 @@ do
 done
 
 if [[ ${check_machine} == true ]]; then
+    # shellcheck source=/github/workspace/tests-dev/machine_config/machine_ursa.config
     source "${PATHRT}"/machine_config/machine_"${MACHINE_ID}".config
 else
     echo "*** Current support of ufs_test.sh only for ${platforms[*]} ! ***"
@@ -217,11 +223,11 @@ if [[ ${LINK_TESTS} == true ]]; then
         exit 1
     fi
 
-    cp "${PATHRT}"/../tests-dev/test_cases/tests/* "${PATHRT}"/tests
-    cp "${PATHRT}"/../tests-dev/test_cases/exp_conf/* "${PATHRT}"/fv3_conf
-    cp "${PATHRT}"/../tests-dev/test_cases/parm/* "${PATHRT}"/parm
-    cp "${PATHRT}"/../tests-dev/test_cases/diag_table/* "${PATHRT}"/parm/diag_table
-    cp "${PATHRT}"/../tests-dev/test_cases/field_table/* "${PATHRT}"/parm/field_table
+    cp "${PATHRT}"/../tests-dev/test_cases/tests/* "${PATHRT}"/tests/.
+    cp "${PATHRT}"/../tests-dev/test_cases/exp_conf/* "${PATHRT}"/fv3_conf/.
+    cp "${PATHRT}"/../tests-dev/test_cases/parm/* "${PATHRT}"/parm/.
+    cp "${PATHRT}"/../tests-dev/test_cases/diag_table/* "${PATHRT}"/parm/diag_table/.
+    cp "${PATHRT}"/../tests-dev/test_cases/field_table/* "${PATHRT}"/parm/field_table/.
 fi
 
 #Check to error out if incompatible options are chosen together
@@ -239,6 +245,44 @@ echo "Machine:  ""${MACHINE_ID}""    Account: ""${ACCNR}"" "
 
 shift $((OPTIND-1))
 [[ $# -gt 1 ]] && usage
+
+#############################################################################
+# For aquaplanet case we need to change the radiation code,
+# as well as supress warnings for land points:
+#############################################################################
+if [[ ${SRT_NAME} == aquaplanet ]]; then
+
+#--- find radiation_astronomy.f file
+  RAD_FILE=$(find ../ -name radiation_astronomy.f)
+#--- if we cannot find radiation_astronomy.f file, then exit:
+  [[ -z ${RAD_FILE} ]] && die "cannot find radiation_astronomy.f file"
+#--- find if file is original (grep text containing word AQUAPLANET)
+#--- if file is original, then add lines to appropriate place
+  if ! grep -q "AQUAPLANET TEST CASE" "${RAD_FILE}"; then
+sed -i '/solcon = solc0/a\
+\
+! AQUAPLANET TEST CASE\
+      solcon=1370.\
+      dlt=0.\
+! AQUAPLANET TEST CASE' "${RAD_FILE}"
+  fi
+
+#--- find fv_diagnostics.F90 file
+  DIAG_FILE=$(find ../ -name fv_diagnostics.F90)
+#--- if we cannot find find ../ -name fv_diagnostics.F90 file, then exit:
+  [[ -z ${DIAG_FILE} ]] && die "cannot find fv_diagnostics.F90 file"
+#--- find if file is original (grep text containing word AQUAPLANET)
+#--- if file is original, then add lines to appropriate place
+  if ! grep -q "AQUAPLANET TEST CASE" "${DIAG_FILE}"; then
+sed -i '/Print out where/a\
+\
+! AQUAPLANET TEST CASE\
+      return\
+! AQUAPLANET TEST CASE' "${DIAG_FILE}"
+  fi
+
+fi
+#############################################################################
 
 TEST_START_TIME="$(date '+%Y%m%d %T')"
 export TEST_START_TIME

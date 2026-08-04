@@ -14,9 +14,13 @@ if(CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   set(CMAKE_Fortran_LINK_FLAGS "")
 elseif(CMAKE_Fortran_COMPILER_ID MATCHES "Intel")
   set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -g -traceback")
-  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -O -assume realloc_lhs")
-  set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -fp-model precise")
-  set(CMAKE_Fortran_FLAGS_DEBUG "-O0 -check -check noarg_temp_created -check nopointer -fpe0 -ftrapuv -init=snan,arrays")
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -assume realloc_lhs")
+  if(FASTER)
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O3 -fp-model precise -assume buffered_stdout -fno-alias -align all -debug minimal -qoverride-limits -ftz -no-ip")
+  else()
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -fp-model precise")
+  endif()
+  set(CMAKE_Fortran_FLAGS_DEBUG "-O0 -check all -check noarg_temp_created -check nopointer -fpe0 -ftrapuv -init=snan,arrays")
   set(CMAKE_Fortran_LINK_FLAGS "")
   #Set CPP defintions for the ufs/cdeps_share source component of the cmeps target library
   list(APPEND CDEPS_SHARE_DEFS "CPRINTEL")
@@ -29,11 +33,14 @@ endif()
 ###############################################################################
 
 list(APPEND _ufs_util_files
-  CMEPS/ufs/flux_atmocn_mod.F90
-  CMEPS/ufs/glc_elevclass_mod.F90
+  CMEPS/ufs/flux_atmocn_driver_mod.F90
+  CMEPS/ufs/flux_atmocn_bulk_mod.F90
   CMEPS/ufs/ufs_kind_mod.F90
-  CMEPS/ufs/perf_mod.F90
+  CMEPS/ufs/ufs_flux_mod.F90
   CMEPS/ufs/ufs_const_mod.F90
+  CMEPS/ufs/perf_mod.F90
+  CMEPS/ufs/wtracers_mod.F90
+  CMEPS/ufs/glc_elevclass_mod.F90
   ${PROJECT_SOURCE_DIR}/CDEPS-interface/CDEPS/share/shr_orb_mod.F90
   ${PROJECT_SOURCE_DIR}/CDEPS-interface/CDEPS/share/shr_const_mod.F90
   ${PROJECT_SOURCE_DIR}/CDEPS-interface/CDEPS/share/shr_abort_mod.F90
@@ -80,7 +87,9 @@ list(APPEND _mediator_files
   CMEPS/mediator/med_phases_post_lnd_mod.F90
   CMEPS/mediator/med_phases_post_glc_mod.F90
   CMEPS/mediator/med_phases_post_rof_mod.F90
-  CMEPS/mediator/med_phases_post_wav_mod.F90)
+  CMEPS/mediator/med_phases_post_wav_mod.F90
+  CMEPS/mediator/med_ufs_trace_wrapper.F90
+  CMEPS/mediator/med_field_info_mod.F90)
 
 if(CDEPS_INLINE)
   list(APPEND _mediator_files CMEPS/mediator/med_phases_cdeps_mod.F90)
@@ -92,17 +101,20 @@ endif()
 ###############################################################################
 
 if(CMEPS_AOFLUX)
-  ### Query CCPP path
-  get_filename_component(FV3_PATH "../FV3" REALPATH)
+  list(APPEND _ufs_util_files
+    CMEPS/ufs/flux_atmocn_ccpp_mod.F90)
 
-  ### If FV3 is available build CCPP host model under CMEPS too
-  if(EXISTS ${FV3_PATH})
+  ### Query CCPP path
+  get_filename_component(UFSATM_PATH "../UFSATM" REALPATH)
+
+  ### If UFSATM is available build CCPP host model under CMEPS too
+  if(EXISTS ${UFSATM_PATH})
     ### Print out information
-    message("FV3_PATH = ${FV3_PATH}")
+    message("UFSATM_PATH = ${UFSATM_PATH}")
     message("Compiling CMEPS with CCPP support.")
 
-    ### Set environment variable for FV3 directory, used by config file
-    set(ENV{FV3_PATH} ${FV3_PATH})
+    ### Set environment variable for UFSATM directory, used by config file
+    set(ENV{UFSATM_PATH} ${UFSATM_PATH})
 
     ### Set suite file that needs to be compiled
     set(_ccpp_suites_arg "--suites=FV3_sfc_ocean")
@@ -119,7 +131,7 @@ if(CMEPS_AOFLUX)
     message("Calling CCPP code generator (ccpp_prebuild.py) for suites ${_ccpp_suites_arg} ...")
     execute_process(
                     COMMAND ${Python_EXECUTABLE}
-                    "${FV3_PATH}/ccpp/framework/scripts/ccpp_prebuild.py"
+                    "${UFSATM_PATH}/ccpp/framework/scripts/ccpp_prebuild.py"
                     "--config=CMEPS/ufs/ccpp/config/ccpp_prebuild_config.py"
                     "--builddir=${CMAKE_CURRENT_BINARY_DIR}"
                     "--namespace=med"
@@ -141,7 +153,6 @@ if(CMEPS_AOFLUX)
     ### Add extra driver file to the source
     list(APPEND _ufs_util_files
       CMEPS/ufs/ccpp/driver/med_ccpp_driver.F90
-      CMEPS/ufs/flux_atmocn_ccpp_mod.F90
       CMEPS/ufs/ufs_io_mod.F90)
 
     ### Set the sources: type definitions
@@ -170,6 +181,9 @@ if(CMEPS_AOFLUX)
     ### Add special CPP flag for CMEPS/CCPP support
     add_definitions(-DUFS_AOFLUX)
   endif()
+else()
+  list(APPEND _ufs_util_files
+    CMEPS/ufs/flux_atmocn_ccpp_stub.F90)
 endif()
 
 ###############################################################################
@@ -184,8 +198,11 @@ set_target_properties(cmeps PROPERTIES Fortran_MODULE_DIRECTORY ${CMAKE_CURRENT_
 target_include_directories(cmeps PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/mod>
                                         $<INSTALL_INTERFACE:mod>)
 target_compile_definitions(cmeps PRIVATE ${CDEPS_SHARE_DEFS})
-target_link_libraries(cmeps PUBLIC esmf
+target_link_libraries(cmeps PUBLIC ESMF::ESMF
                                    PIO::PIO_Fortran)
+if(UFS_TRACING)
+  target_link_libraries(cmeps PUBLIC ufs_tracing)
+endif()
 if(OpenMP_Fortran_FOUND)
   target_link_libraries(cmeps PRIVATE OpenMP::OpenMP_Fortran)
 endif()

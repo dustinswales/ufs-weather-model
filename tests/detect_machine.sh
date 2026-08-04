@@ -8,6 +8,12 @@
 #
 # Thank you for your contribution
 
+# Overwrite auto-detect if in container
+if [[ -d /opt/spack-stack && -v SINGULARITY_CONTAINER ]]; then
+  # We are in a container
+  MACHINE_ID=container
+fi
+
 # If the MACHINE_ID variable is set, skip this script.
 [[ -n ${MACHINE_ID:-} ]] && return
 
@@ -34,11 +40,7 @@ case $(hostname -f) in
   ufe02) MACHINE_ID=ursa ;; ### ursa
   ufe03) MACHINE_ID=ursa ;; ### ursa
   ufe04) MACHINE_ID=ursa ;; ### ursa
-
-  s4-submit.ssec.wisc.edu) MACHINE_ID=s4 ;; ### s4
-
-  fe[1-8]) MACHINE_ID=jet ;; ### jet01-8
-  tfe[12]) MACHINE_ID=jet ;; ### tjet1-2
+  uecflow01) MACHINE_ID=ursa ;; ### ursaecflow01
 
   Orion-login-[1-4].HPC.MsState.Edu) MACHINE_ID=orion ;; ### orion1-4
 
@@ -53,8 +55,9 @@ case $(hostname -f) in
   derecho7.hsn.de.hpc.ucar.edu) MACHINE_ID=derecho ;; ### derecho7
   derecho8.hsn.de.hpc.ucar.edu) MACHINE_ID=derecho ;; ### derecho8
   
-  login[1-4].frontera.tacc.utexas.edu) MACHINE_ID=frontera ;; ### frontera1-4
-  c*.frontera.tacc.utexas.edu) MACHINE_ID=frontera ;; ### frontera compute 
+  ip-*) MACHINE_ID=aws-ec2 ;; ### aws-ec2
+  compute-dy-*) MACHINE_ID=aws-ec2 ;; ### aws-ec2
+  processing-dy-*) MACHINE_ID=aws-ec2 ;; ### aws-ec2
 
   discover3[1-5].prv.cube) MACHINE_ID=discover ;; ### discover31-35
   *) MACHINE_ID=UNKNOWN ;;  # Unknown platform
@@ -70,6 +73,12 @@ fi
 # Overwrite auto-detect with MACHINE if set
 MACHINE_ID=${MACHINE:-${MACHINE_ID}}
 
+# Overwrite auto-detect if in container
+if [[ -d /opt/spack-stack && -v SINGULARITY_CONTAINER ]]; then
+  # We are in a container
+  MACHINE_ID=container
+fi
+
 # If MACHINE_ID is no longer UNKNNOWN, return it
 if [[ "${MACHINE_ID}" != "UNKNOWN" ]]; then
   return
@@ -82,15 +91,15 @@ if [[ -d /lfs/h3 ]]; then
 elif [[ -d /lfs/h1 && ! -d /lfs/h3 ]]; then
   # We are on NOAA TDS Acorn
   MACHINE_ID=acorn
-elif [[ -d /mnt/lfs1 ]]; then
-  # We are on NOAA Jet
-  MACHINE_ID=jet
-elif [[ -d /scratch1 ]]; then
-  # We are on NOAA Hera
-  MACHINE_ID=hera
-elif [[ -d /collab1 ]]; then
-  # We are on NOAA Ursa
-  MACHINE_ID=ursa
+elif [[ -d /scratch3 ]]; then
+  # We are on NOAA Hera or Ursa
+  mount=$(findmnt -n -o SOURCE /home)   
+  if [[ ${mount} =~ "ursa" ]]; then
+    # We are on ursa
+    MACHINE_ID=ursa
+  elif [[ ${mount} =~ "hera" ]]; then
+    MACHINE_ID=hera
+  fi
 elif [[ -d /work ]]; then
   # We are on MSU Orion or Hercules
   mount=$(findmnt -n -o SOURCE /home)   
@@ -106,9 +115,12 @@ elif [[ -d /gpfs/f5 && -d /ncrc ]]; then
 elif [[ -d /gpfs/f6 && -d /ncrc ]]; then
   # We are on GAEA C6.
   MACHINE_ID=gaeac6
-elif [[ -d /data/prod ]]; then
-  # We are on SSEC's S4
-  MACHINE_ID=s4
+elif [[ -d /opt/spack-stack && -v SINGULARITY_CONTAINER ]]; then
+  # We are in a container
+  MACHINE_ID=container
+elif [[ -d /opt/spack-stack && -d /lustre ]]; then
+  # We are on aws-ec2.
+  MACHINE_ID=aws-ec2
 else
   echo WARNING: UNKNOWN PLATFORM 1>&2
 fi
