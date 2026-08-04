@@ -162,6 +162,7 @@
   tend_opt_lwrad = 4
   tend_opt_rad_scaler = 2
   tend_opt_photochem = 2
+  tend_opt_mp = 2
 /
 
 &gfdl_cloud_microphysics_nml
