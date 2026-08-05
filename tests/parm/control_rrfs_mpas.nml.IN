@@ -35,7 +35,7 @@
 &mpas_damping
   mpas_cam_coef                  = 2.0
   mpas_rayleigh_damp_u           = true
-  mpas_zd                        = 16000.0
+  mpas_zd                        = 22000.0
   mpas_xnutr                     = 0.2
   mpas_cam_damping_levels        = 8
 /
@@ -76,7 +76,7 @@
   fhcyc        = @[FHCYC]
   use_ufo      = .true.
   pre_rad      = .false.
-  imp_physics  = 88
+  imp_physics  = @[IMP_PHYSICS]
   pdfcld       = .false.
   fhswr        = 3600.
   fhlwr        = 3600.

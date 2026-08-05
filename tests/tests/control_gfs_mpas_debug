@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# GFS test with MPAS dynamical core in DEBUG mode.
+# GFS test with MPAS dynamical core and CCPP Physics in DEBUG mode.
 #
 ###############################################################################
 
@@ -18,6 +18,7 @@ export FHMAX=3
 export OUTPUT_FH="1 -1"
 export RESTART_FH="3 -1"
 
+export IMP_PHYSICS=8
 export ATM_compute_tasks=12
 export FV3_RUN=gfs_mpas_run.IN
 export CCPP_SUITE=MPAS_GFS

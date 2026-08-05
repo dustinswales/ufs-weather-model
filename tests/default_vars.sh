@@ -577,7 +577,7 @@ export_mpas_gfs ()
     export FV3_RUN=gfs_mpas_run.IN
     export INPUT_NML=control_gfs_mpas.nml.IN
     # Use regional physics for now.
-    export CCPP_SUITE=MPAS_RRFS
+    export CCPP_SUITE=MPAS_GFS
 
     MODEL_CONFIGURE=mpasgfs_configure.IN
 }
