@@ -30,3 +30,4 @@ export STREAM_LIST_HISTORY=stream_list.atmosphere.output
 export STREAM_LIST_RESTART=stream_list.atmosphere.restart
 export STREAM_LIST_DIAG=stream_list.atmosphere.diag_phys
 export DYCORE_ONLY=.false.
+export PHYS_DIAG=.true.
