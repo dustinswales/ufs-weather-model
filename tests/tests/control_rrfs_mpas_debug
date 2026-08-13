@@ -27,3 +27,7 @@ export STREAM_LIST_HISTORY=stream_list.atmosphere.output
 export STREAM_LIST_RESTART=stream_list.atmosphere.restart
 export STREAM_LIST_DIAG=stream_list.atmosphere.diag_phys
 export PHYS_DIAG=.true.
+
+if [[ $MACHINE_ID = ursa ]]; then
+   export MEM_PER_NODE_OPT="#SBATCH --mem=300G"
+fi
