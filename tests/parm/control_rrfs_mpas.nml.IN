@@ -69,6 +69,12 @@
   mpas_print_global_minmax_sca   = .false.
 /
 
+&mpas_physics
+  mpas_sfc_albedo  = .false.
+  mpas_frac_seaice = .true.
+  mpas_lsm_scheme  = 'sf_ruc'
+/
+
 &gfs_physics_nml
   fhzero       = @[FHZERO]
   h2o_phys     = .true.
