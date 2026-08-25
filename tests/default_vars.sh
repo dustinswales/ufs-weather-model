@@ -568,6 +568,8 @@ export_mpas() {
   ZSTANDARD_LEVEL=0
 
   DOMAINS_STACK_SIZE=3000000
+
+  ORO_FILENAME="none"
 }
 export_mpas_rrfs() {
   # RRFS agnostic MPAS settings
