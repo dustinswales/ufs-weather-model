@@ -6,6 +6,7 @@ cp  @[INPUTDATA_ROOT]/MPAS/INPUT/@[MPAS_RESOLUTION]km/Global/* .
 cp  /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/120km/Global/tracer_table .
 cp  /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/120km/Global/stream_list.atmosphere.diag_phys .
 cp  /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/LANDUSE.TBL .
+cp  /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/GENPARM.TBL .
 cp  /scratch3/BMC/gmtb/Dustin.Swales/MPAS/INPUT/120km/Global/mpas.gsl.gsl.global.120km.ugwp_oro_data.nc .
 
 #photochemistry
