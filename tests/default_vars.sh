@@ -519,24 +519,6 @@ export_mpas_stochy ()
 
 }
 
-export_mpas_rrfs ()
-{
-    # RRFS agnostic MPAS settings
-    export_mpas
-
-    # RRFS specific MPAS settings.
-    export DIAG_TABLE=diag_table_mpas
-    export FIELD_TABLE=field_table_rrfs_mpas
-    export FV3_RUN=rrfs_mpas_run.IN
-    export INPUT_NML=control_rrfs_mpas.nml.IN
-    export CCPP_SUITE=MPAS_RRFS
-
-    # Stochastic physics
-    export_mpas_stochy
-
-    MODEL_CONFIGURE=mpasrrfs_configure.IN
-}
-
 function set_restart_file_prefix() {
   local restart_file_prefix
   restart_file_prefix=$(date -u +"%Y%m%d.%H0000" -d "${SYEAR}${SMONTH}${SDAY} ${SHOUR} ${FHROT} hours")
@@ -725,6 +707,9 @@ export_mpas_rrfs() {
   INPUT_NML=control_rrfs_mpas.nml.IN
   CCPP_SUITE=MPAS_RRFS
 
+  # Stochastic physics
+  export_mpas_stochy
+
   MODEL_CONFIGURE=mpasrrfs_configure.IN
 }
 
@@ -739,6 +724,9 @@ export_mpas_gfs() {
   INPUT_NML=control_gfs_mpas.nml.IN
   # Use regional physics for now.
   CCPP_SUITE=MPAS_RRFS
+
+  # Stochastic physics
+  export_mpas_stochy
 
   MODEL_CONFIGURE=mpasgfs_configure.IN
 }
