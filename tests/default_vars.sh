@@ -582,6 +582,28 @@ export_mpas_rrfs() {
   INPUT_NML=control_rrfs_mpas.nml.IN
   CCPP_SUITE=MPAS_RRFS
 
+  # Same as HRRR/RAP defaults below
+  GWD_OPT=3
+  DO_UGWP_V0=.false.
+  DO_UGWP_V0_OROG_ONLY=.false.
+  DO_GSL_DRAG_LS_BL=.true.
+  DO_GSL_DRAG_SS=.true.
+  DO_GSL_DRAG_TOFD=.true.
+  DO_UGWP_V1=.false.
+  DO_UGWP_V1_OROG_ONLY=.false.
+  LDIAG_UGWP=.false.
+
+  # GWG resolution dependent settings
+  # DJS: Not sure what these should be for MPAS mesh size?
+  #CDMBGWD_c48='0.071,2.1,1.0,1.0'
+  #CDMBGWD_c96='0.14,1.8,1.0,1.0'
+  #CDMBGWD_c192='0.23,1.5,1.0,1.0'
+  #CDMBGWD_c384='1.1,0.72,1.0,1.0'
+  #CDMBGWD_c768='4.0,0.15,1.0,1.0'
+
+  # set default
+  CDMBGWD='0.071,2.1,1.0,1.0'
+  
   MODEL_CONFIGURE=mpasrrfs_configure.IN
 }
 

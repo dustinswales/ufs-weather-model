@@ -148,8 +148,11 @@
   cplwav       = @[CPLWAV]
   cplwav2atm   = @[CPLWAV2ATM]
   effr_in      = .true.
-  gwd_opt      = 3
-  ldiag_ugwp   = .false.
+  gwd_opt = @[GWD_OPT]
+  do_gsl_drag_ls_bl    = @[DO_GSL_DRAG_LS_BL]
+  do_gsl_drag_ss       = @[DO_GSL_DRAG_SS]
+  do_gsl_drag_tofd     = @[DO_GSL_DRAG_TOFD]
+  ldiag_ugwp   = .true.
   do_ugwp      = .false.
   do_tofd      = .true.
   do_sppt      = @[DO_SPPT]
