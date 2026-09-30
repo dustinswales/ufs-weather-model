@@ -36,7 +36,6 @@ export DO_MYNNSFCLAY=.true.
 export SFCLAY_COMPUTE_FLUX=.true.
 export DO_MYNNEDMF=.true.
 
-
 if [[ $MACHINE_ID = ursa ]]; then
    export MEM_PER_NODE_OPT="#SBATCH --mem=300G"
 fi

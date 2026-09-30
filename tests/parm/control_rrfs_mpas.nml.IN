@@ -126,6 +126,10 @@
   lsoil        = 9
   lsm          = 3
   lsoil_lsm    = 9
+  mosaic_lu    = 1
+  mosaic_soil  = 1
+  isncond_opt  = 2
+  isncovr_opt  = 2
   kice         = 9
   iopt_dveg    = 1
   iopt_crs     = 1
@@ -183,6 +187,7 @@
   tend_opt_swrad = 4
   tend_opt_lwrad = 4
   tend_opt_rad_scaler = 2
+  tend_opt_surface = 2
   tend_opt_pbl = 2
   tend_opt_photochem = 2
   tend_opt_mp = 2

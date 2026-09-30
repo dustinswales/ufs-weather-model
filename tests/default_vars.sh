@@ -602,7 +602,7 @@ export_mpas_rrfs() {
   #CDMBGWD_c768='4.0,0.15,1.0,1.0'
 
   # set default
-  CDMBGWD='0.071,2.1,1.0,1.0'
+  CDMBGWD='0.14,1.8,1.0,1.0'
   
   MODEL_CONFIGURE=mpasrrfs_configure.IN
 }
