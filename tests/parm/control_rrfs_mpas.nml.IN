@@ -4,10 +4,11 @@
   ccpp_suite = '@[CCPP_SUITE]'
   ic_filename = '@[IC_FILENAME]'
   oro_filename = '@[ORO_FILENAME]'
+  lbc_filename = '@[LBC_FILENAME]'
   stream_list_history = '@[STREAM_LIST_HISTORY]'
   stream_list_restart = '@[STREAM_LIST_RESTART]'
   stream_list_diag    = '@[STREAM_LIST_DIAG]'
-  regional = .false.
+  regional = .true.
   phys_diag = @[PHYS_DIAG]
 /
 
@@ -43,7 +44,7 @@
 /
 
 &mpas_limited_area
-  mpas_apply_lbcs = .false.
+  mpas_apply_lbcs = .true.
 /
 
 &mpas_io
@@ -132,6 +133,7 @@
   isatmedmf    = 1
   do_mynnedmf  = @[DO_MYNNEDMF]
   do_mynnsfclay = @[DO_MYNNSFCLAY]
+  bl_mynn_tkeadvect = .true.
   sfclay_compute_flux = @[SFCLAY_COMPUTE_FLUX]
   lheatstrg    = @[LHEATSTRG]
   lseaspray    = @[LSEASPRAY]
@@ -216,56 +218,6 @@
   tend_opt_gwd = 2
 /
 
-&gfdl_cloud_microphysics_nml
-  sedi_transport = .true.
-  do_sedi_heat = .false.
-  rad_snow = .true.
-  rad_graupel = .true.
-  rad_rain = .true.
-  const_vi = .false.
-  const_vs = .false.
-  const_vg = .false.
-  const_vr = .false.
-  vi_max = 1.
-  vs_max = 2.
-  vg_max = 12.
-  vr_max = 12.
-  qi_lim = 1.
-  prog_ccn = .false.
-  do_qa = .true.
-  fast_sat_adj = .true.
-  tau_l2v = 225.
-  tau_v2l = 150.
-  tau_g2v = 900.
-  rthresh = 10.e-6  ! This is a key parameter for cloud water
-  dw_land  = 0.16
-  dw_ocean = 0.10
-  ql_gen = 1.0e-3
-  ql_mlt = 1.0e-3
-  qi0_crt = 8.0E-5
-  qs0_crt = 1.0e-3
-  tau_i2s = 1000.
-  c_psaci = 0.05
-  c_pgacs = 0.01
-  rh_inc = 0.30
-  rh_inr = 0.30
-  rh_ins = 0.30
-  ccn_l = 300.
-  ccn_o = 100.
-  c_paut = 0.5
-  c_cracw = 0.8
-  use_ppm = .false.
-  use_ccn = .true.
-  mono_prof = .true.
-  z_slope_liq  = .true.
-  z_slope_ice  = .true.
-  de_ice = .false.
-  fix_negative = .true.
-  icloud_f = 1
-  mp_time = 150.
-  reiflag = 2
-/
-
 &cires_ugwp_nml
   knob_ugwp_solver  = 2
   knob_ugwp_source  = 1,1,0,0
@@ -280,4 +232,3 @@
   knob_ugwp_version = 0
   launch_level      = 54
 /
-

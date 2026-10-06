@@ -4,38 +4,52 @@
 #
 ###############################################################################
 
-export TEST_DESCR="Build UWM with MPAS dynamical core for RRFS application"
+TEST_DESCR="Build UWM with MPAS dynamical core for RRFS application"
 
-export CNTL_DIR=control_rrfs_mpas_debug
+CNTL_DIR=control_rrfs_mpas_debug
 
-export LIST_FILES=""
+LIST_FILES="history.2023-03-10_16.00.00.nc   \
+            history.2023-03-10_17.00.00.nc   \
+            history.2023-03-10_18.00.00.nc   \
+            history.2023-03-10_19.00.00.nc   \
+            history.2023-03-10_20.00.00.nc   \
+            history.2023-03-10_21.00.00.nc   \
+            diag_phys.2023-03-10_16.00.00.nc \
+            diag_phys.2023-03-10_17.00.00.nc \
+            diag_phys.2023-03-10_18.00.00.nc \
+            diag_phys.2023-03-10_19.00.00.nc \
+            diag_phys.2023-03-10_20.00.00.nc \
+            diag_phys.2023-03-10_21.00.00.nc \
+            restart.2023-03-10_21.00.00.nc"
 
 export_mpas_rrfs
 
-export FHMAX=6
-export OUTPUT_FH="1 -1"
-export RESTART_FH="6 -1"
+FHMAX=6
+OUTPUT_FH="1 -1"
+RESTART_FH="6 -1"
 
-export IMP_PHYSICS=88
-export ATM_compute_tasks=12
-export FV3_RUN=rrfs_mpas_run.IN
-export CCPP_SUITE=MPAS_RRFS
-export INPUT_NML=control_rrfs_mpas.nml.IN
-export IC_FILENAME=mpas.gsl.gsl.global.120km.gfs.init.2023-03-10_15.00.00.nc
-export ORO_FILENAME=mpas.gsl.gsl.global.120km.ugwp_oro_data.nc
-export GRID_FILENAME=x1.40962.graph.info.part.
-export STREAM_LIST_HISTORY=stream_list.atmosphere.output
-export STREAM_LIST_RESTART=stream_list.atmosphere.restart
-export STREAM_LIST_DIAG=stream_list.atmosphere.diag_phys
-export PHYS_DIAG=.true.
+IMP_PHYSICS=88
+ATM_compute_tasks=4
+FV3_RUN=rrfs_mpas_run.IN
+CCPP_SUITE=MPAS_RRFSv2_alpha
+INPUT_NML=control_rrfs_mpas.nml.IN
+ORO_FILENAME=mpas.gsl.gsl.conus.120km.ugwp_oro_data.nc
+IC_FILENAME=mpas.gsl.gsl.conus.120km.gfs.init.2023-03-10_15.00.00.nc
+LBC_FILENAME=mpas.gsl.gsl.conus.120km.gfs.lbc.2023-03-10_15.00.00.nc
+GRID_FILENAME=conus.120km.graph.info.part.
+STREAM_LIST_HISTORY=stream_list.atmosphere.output
+STREAM_LIST_RESTART=stream_list.atmosphere.restart
+STREAM_LIST_DIAG=stream_list.atmosphere.diag_phys
+PHYS_DIAG=.true.
+REGIONAL=.true.
 
 #GWD
-export LDIAG_UGWP=.true.
+LDIAG_UGWP=.true.
 
-export DO_MYNNSFCLAY=.true.
-export SFCLAY_COMPUTE_FLUX=.true.
-export DO_MYNNEDMF=.true.
+DO_MYNNSFCLAY=.true.
+SFCLAY_COMPUTE_FLUX=.true.
+DO_MYNNEDMF=.true.
 
 if [[ $MACHINE_ID = ursa ]]; then
-   export MEM_PER_NODE_OPT="#SBATCH --mem=300G"
+   MEM_PER_NODE_OPT="#SBATCH --mem=300G"
 fi
